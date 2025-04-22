@@ -1,12 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Topics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topics | Life 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: white;
+      overflow-x: hidden;
+    }
+
+    .layout-wrapper {
+      max-width: 982px;
+      margin: 0 auto;
+      padding: 120px 20px 60px; /* ⬅ top padding to clear navbar */
+    }
+
+    .hero__title {
+      text-align: center;
+      color: #22282B;
+      font-size: 49.1px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: capitalize;
+    }
+
+    .hero__desc {
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      color: #22282B;
+      font-size: 12.27px;
+      font-weight: 500;
+      line-height: 18px;
+      opacity: 0.85;
+    }
+
+    .topics-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .topic-card {
+      width: 260px;
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .topic-card:hover {
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .topic-card h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #22282B;
+    }
+
+    .topic-card p {
+      font-size: 13px;
+      line-height: 1.4;
+      color: #22282B;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .topic-card a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: #01761B;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="layout-wrapper">
+
+    <!-- ✅ Navbar -->
+    <div class="navbar">
+      <div class="navbar__logo">Life 101</div>
+
+      <nav class="navbar__center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="topics.html">Topics</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+
+      <div class="navbar__auth">
+        <a href="signin.html" class="navbar__signup">
+          <span>Get Started</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ✅ Header -->
+    <h1 class="hero__title">Explore Our Topics</h1>
+    <p class="hero__desc">
+      The skills school forgot to teach — made simple, practical, and actually useful. <br />
+      Click any topic below to start learning.
+    </p>
+
+    <!-- ✅ Cards -->
+    <div class="topics-grid">
+      <div class="topic-card">
+        <h2>💰 Money & Budgeting</h2>
+        <p>Master the basics of personal finance, managing expenses, saving, and avoiding debt traps.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="topic-card">
+        <h2>🍳 Cooking & Nutrition</h2>
+        <p>Learn how to cook simple meals, read food labels, and eat well on a student budget.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="topic-card">
+        <h2>🧠 Health & Well-being</h2>
+        <p>Understand how to manage mental and physical health, access resources, and create healthy habits.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="topic-card">
+        <h2>💼 Work & Productivity</h2>
+        <p>Time management, building routines, workplace etiquette, and professional growth tips.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="topic-card">
+        <h2>🏠 Home & Maintenance</h2>
+        <p>Essential skills for living independently — cleaning, laundry, repairs, and renter tips.</p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <div class="topic-card">
+        <h2>📅 Legal & Admin Life</h2>
+        <p>Taxes, insurance, banking, official docs — all the life admin no one told you about.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

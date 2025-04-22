@@ -1,12 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Life 101</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: white;
+      overflow-x: hidden;
+    }
+
+    .layout-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 982px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Force override of hardcoded navbar position */
+    .navbar {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+
+    .hero__title {
+      text-align: center;
+      color: #22282B;
+      font-size: 49.1px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-transform: capitalize;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .team-card {
+      width: 200px;
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 8px;
+      text-align: center;
+      padding: 24px 20px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .team-card:hover {
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .stats__number {
+      font-size: 32.73px;
+      line-height: 36.01px;
+      font-weight: 600;
+      color: #22282B;
+      margin-bottom: 10px;
+    }
+
+    .stats__label {
+      font-size: 12.27px;
+      line-height: 15.96px;
+      color: #22282B;
+      font-weight: 500;
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+
+    .team-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .team-card ul li {
+      font-size: 12.27px;
+      line-height: 15.96px;
+      color: #22282B;
+      margin-top: 4px;
+    }
+  </style>
 </head>
+
 <body>
-    
+
+  <!-- ✅ CENTERED WRAPPER -->
+  <div class="layout-wrapper">
+
+    <!-- ✅ NAVBAR using original class -->
+    <div class="navbar">
+      <div class="navbar__logo">Life 101</div>
+
+      <nav class="navbar__center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="topics.html">Topics</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+
+      <div class="navbar__auth">
+        <a href="signin.html" class="navbar__signup">
+          <span>Get Started</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ✅ CONTENT -->
+    <section class="team-section">
+      <h1 class="hero__title">Meet the Team</h1>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <img src="http://iyawebdev.com/idsn531/20251/ascolani.jpg" alt="Max Ascolani">
+          <div class="stats__number">Max Ascolani</div>
+          <div class="stats__label">[PUT PLACEHOLDER FOR TIME BEING]</div>
+          <ul><li>Ideation</li><li>HTML</li></ul>
+        </div>
+
+        <div class="team-card">
+          <img src="http://iyawebdev.com/idsn531/20251/jhulce.jpg" alt="Jake Hulce">
+          <div class="stats__number">Jake Hulce</div>
+          <div class="stats__label">[PUT PLACEHOLDER FOR TIME BEING]</div>
+          <ul><li>PM</li><li>HTML</li></ul>
+        </div>
+
+        <div class="team-card">
+          <img src="http://iyawebdev.com/idsn531/20251/cschaul.jpg" alt="Calvin Schaul">
+          <div class="stats__number">Calvin Schaul</div>
+          <div class="stats__label">[PUT PLACEHOLDER FOR TIME BEING]</div>
+          <ul><li>HTML</li><li>JS</li></ul>
+        </div>
+
+        <div class="team-card">
+          <img src="http://iyawebdev.com/idsn531/20251/ikeating.jpg" alt="Isabella Keating">
+          <div class="stats__number">Isabella Keating</div>
+          <div class="stats__label">[PUT PLACEHOLDER FOR TIME BEING]</div>
+          <ul><li>PM</li><li>HTML</li></ul>
+        </div>
+
+        <div class="team-card">
+          <img src="http://iyawebdev.com/idsn531/20251/pemcnama.jpg" alt="Paige McNamara-Pittler">
+          <div class="stats__number">Paige McNamara-Pittler</div>
+          <div class="stats__label">[PUT PLACEHOLDER FOR TIME BEING]</div>
+          <ul><li>Design</li><li>CSS</li></ul>
+        </div>
+
+      </div>
+    </section>
+  </div>
 </body>
 </html>
