@@ -1,12 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sign In</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Life 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: white;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      max-width: 982px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar__logo {
+      font-size: 16.37px;
+      font-weight: 700;
+      color: #22282B;
+    }
+
+    .navbar__center a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #22282B;
+      font-size: 14px;
+    }
+
+    .navbar__auth .navbar__signup {
+      padding: 8px 16px;
+      background-color: #01761B;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .layout-wrapper {
+      max-width: 400px;
+      margin: 120px auto;
+      padding: 40px;
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+    }
+
+    .form-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #22282B;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      font-size: 14px;
+      color: #22282B;
+      margin-bottom: 4px;
+    }
+
+    input {
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #E3E3E3;
+      border-radius: 6px;
+      background: white;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: #01761B;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #015f16;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    .form-footer a {
+      color: #01761B;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="navbar">
+    <div class="navbar__logo">Life 101</div>
+    <nav class="navbar__center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="topics.html">Topics</a>
+      <a href="resources.html">Resources</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <div class="navbar__auth">
+      <a href="signin.html" class="navbar__signup">
+        <span>Get Started</span>
+      </a>
+    </div>
+  </div>
+  <div class="layout-wrapper">
+    <h1 class="form-title">Create Your Account</h1>
+    <form action="#" method="POST">
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+      <div>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="form-footer">
+      Already have an account? <a href="signin.html">Sign In</a>
+    </div>
+  </div>
 </body>
 </html>
