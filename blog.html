@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Life 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: white;
+      overflow-x: hidden;
+    }
+
+    .layout-wrapper {
+      max-width: 982px;
+      margin: 0 auto;
+      padding: 120px 20px 60px;
+    }
+
+    .hero__title {
+      text-align: center;
+      color: #22282B;
+      font-size: 49.1px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: capitalize;
+    }
+
+    .hero__desc {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      color: #22282B;
+      font-size: 12.27px;
+      font-weight: 500;
+      line-height: 18px;
+      opacity: 0.85;
+    }
+
+    .blog-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .blog-card {
+      width: 280px;
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 8px;
+      padding: 24px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .blog-card:hover {
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    .blog-card h3 {
+      font-size: 18px;
+      color: #22282B;
+      margin-bottom: 10px;
+    }
+
+    .blog-card p {
+      font-size: 13px;
+      line-height: 1.4;
+      color: #22282B;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .blog-card em {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .blog-card a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: #01761B;
+    }
+
+    .load-more {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="layout-wrapper">
+    <div class="navbar">
+      <div class="navbar__logo">Life 101</div>
+
+      <nav class="navbar__center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="topics.html">Topics</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+
+      <div class="navbar__auth">
+        <a href="signin.html" class="navbar__signup">
+          <span>Get Started</span>
+        </a>
+      </div>
+    </div>
+    <h1 class="hero__title">Latest Articles</h1>
+    <p class="hero__desc">Learn, grow, and thrive with real-world insights—from money and food to home fixes and everyday life skills.</p>
+    <div class="blog-grid">
+
+      <div class="blog-card">
+        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*54X7Mpj0aJchJUnGPmFu1A@2x.jpeg" alt="Featured Blog">
+        <h3>Adulthood: A Growing Journey</h3>
+        <p>Explore the challenges and lessons that come with entering adulthood, in this honest and personal essay.</p>
+        <em>By Life 101</em>
+        <a href="https://medium.com/@muskan220501/adulthood-d81956b7f0b6" target="_blank">Read Article</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*AuUki6AygL056PGP" alt="Blog 2">
+        <h3>Leaving the Nest: Preparing for Independent Living</h3>
+        <p>Practical advice for young adults getting ready to step into life on their own—from routines to responsibilities.</p>
+        <em>By Life 101</em>
+        <a href="https://medium.com/@selfhelpchampion4/leaving-the-nest-preparing-for-independent-living-adulting-101-day-2-of-26-665b7aa0aa94" target="_blank">Read Article</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*dXKVgE-srw709GtqMgk78g.jpeg" alt="Blog 3">
+        <h3>Career Readiness: Resumes & Professional Etiquette</h3>
+        <p>Get prepped for your career with tips on resume building, interviews, and navigating the workplace.</p>
+        <em>By Life 101</em>
+        <a href="https://medium.com/@selfhelpchampion4/career-readiness-resumes-interviews-and-professional-etiquette-adulting-101-day-6-of-25-a5a16d97772c" target="_blank">Read Article</a>
+      </div>
+
+      <div class="blog-card">
+        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*60sgHcCpW-KxaK6m0vuGrA.png" alt="Blog 4">
+        <h3>Money Matters: Budgeting, Saving & Planning</h3>
+        <p>Foundational advice on managing your money, avoiding common pitfalls, and building strong financial habits.</p>
+        <em>By Life 101</em>
+        <a href="https://medium.com/@selfhelpchampion4/money-matters-budgeting-saving-and-financial-planning-adulting-101-day-3-of-26-17f6e18b3907" target="_blank">Read Article</a>
+      </div>
+
+    </div>
+
+    <div class="load-more">
+      <a href="#" class="cta"><span class="cta__text">Load More</span></a>
+    </div>
+
+  </div>
 </body>
 </html>
