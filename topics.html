@@ -14,10 +14,43 @@
       overflow-x: hidden;
     }
 
+    .navbar {
+      max-width: 982px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar__logo {
+      font-size: 16.37px;
+      font-weight: 700;
+      color: #22282B;
+    }
+
+    .navbar__center a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #22282B;
+      font-size: 14px;
+    }
+
+    .navbar__auth .navbar__signup {
+      padding: 8px 16px;
+      background-color: #01761B;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
     .layout-wrapper {
       max-width: 982px;
       margin: 0 auto;
-      padding: 120px 20px 60px; /* ⬅ top padding to clear navbar */
+      padding: 120px 20px 60px;
+      /* ⬅ SAME as blog.html */
     }
 
     .hero__title {
@@ -88,10 +121,9 @@
 <body>
   <div class="layout-wrapper">
 
-    <!-- ✅ Navbar -->
+    <!-- ✅ NAVBAR using original class -->
     <div class="navbar">
       <div class="navbar__logo">Life 101</div>
-
       <nav class="navbar__center">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -99,7 +131,6 @@
         <a href="resources.html">Resources</a>
         <a href="blog.html">Blog</a>
       </nav>
-
       <div class="navbar__auth">
         <a href="signin.html" class="navbar__signup">
           <span>Get Started</span>

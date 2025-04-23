@@ -1,131 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Life 101</title>
-  
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Manrope', sans-serif;
-        background: white;
-        overflow-x: hidden;
-      }
-  
-      .layout-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 982px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-  
-      .navbar {
-        position: relative !important;
-        left: auto !important;
-        top: auto !important;
-        justify-content: space-between;
-        padding: 20px 0;
-      }
-  
-      .hero__title {
-        text-align: center;
-        color: #22282B;
-        font-size: 49.1px;
-        font-weight: 700;
-        margin-bottom: 40px;
-        text-transform: capitalize;
-      }
-  
-      .team-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-      }
-  
-      .team-card {
-        width: 200px;
-        background: #FAFAFA;
-        border: 1px solid #E3E3E3;
-        border-radius: 8px;
-        text-align: center;
-        padding: 24px 20px;
-        transition: all 0.2s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 450px; /* updated to accommodate longer bios */
-      }
-  
-      .team-card:hover {
-        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
-        transform: translateY(-3px);
-      }
-  
-      .team-card img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
-      }
-  
-      .stats__number {
-        font-size: 18px;
-        line-height: 1.2;
-        font-weight: 600;
-        color: #22282B;
-        margin-bottom: 10px;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-  
-      .stats__label {
-        font-size: 12.27px;
-        line-height: 15.96px;
-        color: #22282B;
-        font-weight: 500;
-        margin-bottom: 12px;
-        word-break: break-word;
-        max-height: 300px;
-        overflow-y: auto;
-        padding-right: 4px;
-      }
-  
-      .team-card ul {
-        list-style: none;
-        padding: 0;
-        margin-top: auto;
-        text-align: center;
-      }
-  
-      .team-card ul li {
-        font-size: 12.27px;
-        line-height: 15.96px;
-        color: #22282B;
-        margin-top: 4px;
-      }
-  
-      /* Optional: style scrollbar if it appears */
-      .stats__label::-webkit-scrollbar {
-        width: 4px;
-      }
-  
-      .stats__label::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 10px;
-      }
-    </style>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Life 101</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: white;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      max-width: 982px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar__logo {
+      font-size: 16.37px;
+      font-weight: 700;
+      color: #22282B;
+    }
+
+    .navbar__center a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #22282B;
+      font-size: 14px;
+    }
+
+    .navbar__auth .navbar__signup {
+      padding: 8px 16px;
+      background-color: #01761B;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .layout-wrapper {
+      max-width: 982px;
+      margin: 0 auto;
+      padding: 120px 20px 60px;
+      /* ⬅ SAME as blog.html */
+    }
+
+    .hero__title {
+      text-align: center;
+      color: #22282B;
+      font-size: 49.1px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-transform: capitalize;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .team-card {
+      width: 200px;
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 8px;
+      text-align: center;
+      padding: 24px 20px;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 450px;
+      /* updated to accommodate longer bios */
+    }
+
+    .team-card:hover {
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .stats__number {
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #22282B;
+      margin-bottom: 10px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .stats__label {
+      font-size: 12.27px;
+      line-height: 15.96px;
+      color: #22282B;
+      font-weight: 500;
+      margin-bottom: 12px;
+      word-break: break-word;
+      max-height: 300px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .team-card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: auto;
+      text-align: center;
+    }
+
+    .team-card ul li {
+      font-size: 12.27px;
+      line-height: 15.96px;
+      color: #22282B;
+      margin-top: 4px;
+    }
+
+    /* Optional: style scrollbar if it appears */
+    .stats__label::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .stats__label::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 10px;
+    }
+  </style>
+</head>
 
 <body>
 
@@ -135,7 +160,6 @@
     <!-- ✅ NAVBAR using original class -->
     <div class="navbar">
       <div class="navbar__logo">Life 101</div>
-
       <nav class="navbar__center">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -143,7 +167,6 @@
         <a href="resources.html">Resources</a>
         <a href="blog.html">Blog</a>
       </nav>
-
       <div class="navbar__auth">
         <a href="signin.html" class="navbar__signup">
           <span>Get Started</span>
@@ -159,40 +182,65 @@
         <div class="team-card">
           <img src="http://iyawebdev.com/idsn531/20251/ascolani.jpg" alt="Max Ascolani">
           <div class="stats__number">Max Ascolani</div>
-          <div class="stats__label">Max Ascolani is an entrepreneur with experience building AI-powered tools and user-centric web platforms. With a background in consulting and account management at Amazon and early-stage startups, he brings a sharp focus on lean execution, aesthetic design, and technical clarity.</div>
-          <ul><li>Ideation</li><li>HTML</li></ul>
+          <div class="stats__label">Max Ascolani is an entrepreneur with experience building AI-powered tools and
+            user-centric web platforms. With a background in consulting and account management at Amazon and early-stage
+            startups, he brings a sharp focus on lean execution, aesthetic design, and technical clarity.</div>
+          <ul>
+            <li>Ideation</li>
+            <li>HTML</li>
+          </ul>
         </div>
 
         <div class="team-card">
           <img src="http://iyawebdev.com/idsn531/20251/jhulce.jpg" alt="Jake Hulce">
           <div class="stats__number">Jake Hulce</div>
-          <div class="stats__label">Jake Hulce is a project manager and creative builder with a passion for technology, storytelling, and real-world problem solving. With a background in supply chain operations and a master’s in Integrated Design, Business, and Technology from USC, he combines strategy with heart. From startups to Fortune 500s, Jake thrives on leading cross-functional teams, empowering others, and turning complex ideas into impactful experiences.</div>
-          <ul><li>PM</li><li>HTML</li></ul>
+          <div class="stats__label">Jake Hulce is a project manager and creative builder with a passion for technology,
+            storytelling, and real-world problem solving. With a background in supply chain operations and a master’s in
+            Integrated Design, Business, and Technology from USC, he combines strategy with heart. From startups to
+            Fortune 500s, Jake thrives on leading cross-functional teams, empowering others, and turning complex ideas
+            into impactful experiences.</div>
+          <ul>
+            <li>PM</li>
+            <li>HTML</li>
+          </ul>
         </div>
 
         <div class="team-card">
           <img src="http://iyawebdev.com/idsn531/20251/cschaul.jpg" alt="Calvin Schaul">
           <div class="stats__number">Calvin Schaul</div>
           <div class="stats__label">[PUT PLACEHOLDER FOR TIME BEING]</div>
-          <ul><li>HTML</li><li>JS</li></ul>
+          <ul>
+            <li>HTML</li>
+            <li>JS</li>
+          </ul>
         </div>
 
         <div class="team-card">
           <img src="http://iyawebdev.com/idsn531/20251/ikeating.jpg" alt="Isabella Keating">
           <div class="stats__number">Isabella Keating</div>
-          <div class="stats__label">Isabella Keating is a marketing strategist with experience leading digital-first campaigns for global brands like Google and Goldman Sachs. With a passion for user experience and emerging technology, she brings a strategic lens to web development—connecting data-driven insights with compelling design and content.</div>
-          <ul><li>PM</li><li>HTML</li></ul>
+          <div class="stats__label">Isabella Keating is a marketing strategist with experience leading digital-first
+            campaigns for global brands like Google and Goldman Sachs. With a passion for user experience and emerging
+            technology, she brings a strategic lens to web development—connecting data-driven insights with compelling
+            design and content.</div>
+          <ul>
+            <li>PM</li>
+            <li>HTML</li>
+          </ul>
         </div>
 
         <div class="team-card">
           <img src="http://iyawebdev.com/idsn531/20251/pemcnama.jpg" alt="Paige McNamara-Pittler">
           <div class="stats__number">Paige McNamara-Pittler</div>
           <div class="stats__label">[PUT PLACEHOLDER FOR TIME BEING]</div>
-          <ul><li>Design</li><li>CSS</li></ul>
+          <ul>
+            <li>Design</li>
+            <li>CSS</li>
+          </ul>
         </div>
 
       </div>
     </section>
   </div>
 </body>
+
 </html>
