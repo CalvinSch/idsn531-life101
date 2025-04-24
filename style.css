@@ -1,3 +1,7 @@
+body {
+
+    font-family: 'Manrope', sans-serif;
+}
 /* Main container */
 .container {
     width: 100%;
@@ -96,6 +100,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 4.09px;
+    border: 1px solid red;
 }
 .navbar__logo {
     text-align: center;
