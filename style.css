@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 /* Hero section */
@@ -91,6 +92,17 @@ body {
     mix-blend-mode: color-burn;
 }
 
+.center__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-position: center;
+    width: 50%;
+}
+
 /* Navigation bar inside Hero */
 .navbar {
     position: absolute;
@@ -100,7 +112,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 4.09px;
-    border: 1px solid red;
+    bborder: 1px solid red;
 }
 .navbar__logo {
     text-align: center;
@@ -416,3 +428,21 @@ body {
     font-weight: 400;
     line-height: 12px;
 }
+
+.navbar__register-btn {
+    padding: 10px 20px;
+    background-color: #01761B;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+  
+  .navbar__register-btn:hover {
+    background-color: #025014;
+  }
+  

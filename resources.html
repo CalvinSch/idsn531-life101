@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
     <title>Resources</title>
 </head>
+<style>
+            .navbar {
+          max-width: 982px;
+          margin: 0 auto;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        .navbar__logo {
+          font-size: 16.37px;
+          font-weight: 700;
+          color: #22282B;
+        }
+    
+        .navbar__center a {
+          margin: 0 12px;
+          text-decoration: none;
+          color: #22282B;
+          font-size: 14px;
+        }
+</style>
 <body>
     <!-- Ideas: Use data for tables in some form for extra bonus -->
      <!-- Weekly meal planner with interactive table? -->
     <!-- TODO: @Paige - Add finance spreadsheet -->
     <!-- TODO: @Jake Dad tips? -->
+    <div class="navbar">
+        <div class="navbar__logo">Life 101</div>
+        <nav class="navbar__center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="resources.html">Resources</a>
+          <a href="blog.html">Blog</a>
+          <a href="signup.html" class="navbar__register-btn">Register Today!</a>
+        </nav>
+      </div>
 </body>
 </html>
