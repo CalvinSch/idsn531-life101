@@ -1,188 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=1.0">
-    <title>Home</title>
-    <style>
-        body {
-          margin: 0;
-          font-family: 'Manrope', sans-serif;
-          background: white;
-          overflow-x: hidden;
-          bbackground: url('img/managing-schedule.png') no-repeat center center fixed;
-          background-size: cover;
-        }
-    
-        .navbar {
-          max-width: 982px;
-          margin: 0 auto;
-          padding: 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-    
-        .navbar__logo {
-          font-size: 16.37px;
-          font-weight: 700;
-          color: #22282B;
-        }
-    
-        .navbar__center a {
-          margin: 0 12px;
-          text-decoration: none;
-          color: #22282B;
-          font-size: 14px;
-        }
-    
-        .navbar__auth .navbar__signup {
-          padding: 8px 16px;
-          background-color: #01761B;
-          color: white;
-          border-radius: 50px;
-          text-decoration: none;
-          font-size: 12px;
-          font-weight: 600;
-        }
-    
-        .layout-wrapper {
-          max-width: 982px;
-          margin: 0 auto;
-          padding: 120px 20px 60px;
-          /* ⬅ SAME as blog.html */
-        }
-    
-        .hero__title {
-          text-align: center;
-          color: #22282B;
-          font-size: 49.1px;
-          font-weight: 700;
-          margin-bottom: 16px;
-          text-transform: capitalize;
-        }
-    
-        .hero__desc {
-          text-align: center;
-          width: 100%;
-          max-width: 600px;
-          margin: 0 auto 50px;
-          color: #22282B;
-          font-size: 12.27px;
-          font-weight: 500;
-          line-height: 18px;
-          opacity: 0.85;
-        }
-    
-        .topics-grid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 30px;
-          justify-content: center;
-        }
-
-        .topic-card {
-          width: 320px; /* increased from 260px */
-          background: #FAFAFA;
-          border: 1px solid #E3E3E3;
-          border-radius: 12px; /* slightly rounder */
-          padding: 24px;
-          text-align: center;
-          transition: all 0.2s ease-in-out;
-          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-
-        /* Hover effect for elevation */
-        .topic-card:hover {
-          box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
-          transform: translateY(-3px);
-        }
-
-        /* Image inside topic card */
-        .topic-card img {
-          width: 100%;
-          height: 180px;
-          object-fit: cover;
-          border-radius: 8px;
-          margin-bottom: 16px;
-        }
-
-        .topic-card h2 {
-          font-size: 20px;
-          margin-bottom: 10px;
-          color: #22282B;
-        }
-
-        .topic-card p {
-          font-size: 14px;
-          line-height: 1.5;
-          color: #22282B;
-          opacity: 0.9;
-          margin-bottom: 12px;
-        }
-
-        .topic-card a {
-          text-decoration: none;
-          font-size: 13px;
-          font-weight: 600;
-          color: #01761B;
-        }
-
-        .bg-image {
-          position: fixed;    /* Fixed position so it stays in view */
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: url('img/managing-schedule.png') no-repeat center center;
-          background-size: cover;
-          z-index: -1;        /* Place behind other content */
-        }
-      </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=2.0">
+  <title>Home</title>
 </head>
-<body>
-  <div class="bg-image"></div>
-    <div class="container">
-        <div class="navbar">
-            <div class="navbar__logo">Life 101</div>
-            <nav class="navbar__center">
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="topics.html">Topics</a>
-              <a href="resources.html">Resources</a>
-              <a href="blog.html">Blog</a>
-              <a href="signup.html" class="navbar__register-btn">Register Today!</a>
-            </nav>
-          </div>
-        <div style="padding-top: 120px; padding-bottom: 20px;">
-            <img class="center__img" src="img/green-logo.png" alt="Life 101 Logo" />
-            <h2 class="hero__subtitle">The Ultimate Growth Journey</h2>
-            <p class="hero__desc">
-              The skills school forgot to teach — made simple, practical, and actually useful. <br />
-              Click any topic below to start learning.
-            </p>
+
+<body class="homepage">
+  <div class="container">
+
+    <!-- NAVBAR (consistent on all pages) -->
+    <div class="navbar">
+      <div class="navbar__wrapper">
+        <div class="navbar__logo">
+          <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
         </div>
-        <h2 class="hero__subtitle">Explore Our Topics</h2>
-        <div class="topics-grid">
-          <div class="topic-card">
-            <img src="img/changing-lightbulb.png" alt="Financial Literacy">
-            <h2>Financial Literacy</h2>
-            <p>Learn how to budget, save, and invest wisely.</p>
-            <a href="signup.html">Explore</a>
+        <div class="navbar__burger" onclick="toggleMenu()">☰</div>
+        <div class="navbar__menu" id="mobileMenu">
+          <nav class="navbar__center">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="topics.html">Topics</a>
+            <a href="resources.html">Resources</a>
+            <a href="blog.html">Blog</a>
+          </nav>
+          <div class="navbar__auth">
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
           </div>
-        
-          <div class="topic-card">
-            <img src="img/taxes-1.jpg" alt="Mental Health">
-            <h2>Mental Health</h2>
-            <p>Strategies for well-being and self-care.</p>
-            <a href="signup.html">Explore</a>
-          </div>
-        
-          <!-- Add more cards as needed -->
         </div>
-        
+      </div>
+    </div>
+
+    <div class="layout-wrapper homepage__hero">
+      <h2 class="hero__subtitle">The Ultimate Growth Journey</h2>
+      <p class="hero__desc">
+        The skills school forgot to teach — made simple, practical, and actually useful. <br />
+        Click any topic below to start learning.
+      </p>
+      <h2 class="section__title">Explore Our Topics</h2>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <img src="img/changing-lightbulb.png" alt="Financial Literacy">
+          <h2>Financial Literacy</h2>
+          <p>Learn how to budget, save, and invest wisely.</p>
+          <a href="signup.html">Explore</a>
+        </div>
+        <div class="topic-card">
+          <img src="img/taxes-1.jpg" alt="Mental Health">
+          <h2>Mental Health</h2>
+          <p>Strategies for well-being and self-care.</p>
+          <a href="signup.html">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more cards as needed -->
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+
+
 </body>
+
 </html>

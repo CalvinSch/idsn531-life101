@@ -1,205 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | Life 101</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Manrope', sans-serif;
-      background: white;
-      overflow-x: hidden;
-    }
-
-    .navbar {
-      max-width: 982px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .navbar__logo {
-      font-size: 16.37px;
-      font-weight: 700;
-      color: #22282B;
-    }
-
-    .navbar__center a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #22282B;
-      font-size: 14px;
-    }
-
-    .navbar__auth .navbar__signup {
-      padding: 8px 16px;
-      background-color: #01761B;
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .layout-wrapper {
-      max-width: 982px;
-      margin: 0 auto;
-      padding: 120px 20px 60px;
-    }
-
-    .hero__title {
-      text-align: center;
-      color: #22282B;
-      font-size: 49.1px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-transform: capitalize;
-    }
-
-    .hero__desc {
-      text-align: center;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto 50px;
-      color: #22282B;
-      font-size: 12.27px;
-      font-weight: 500;
-      line-height: 18px;
-      opacity: 0.85;
-    }
-
-    .topics-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .topic-card {
-      width: 260px;
-      background: #FAFAFA;
-      border: 1px solid #E3E3E3;
-      border-radius: 8px;
-      padding: 24px;
-      text-align: center;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .topic-card:hover {
-      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
-      transform: translateY(-3px);
-    }
-
-    .topic-card h2 {
-      font-size: 18px;
-      margin-bottom: 12px;
-      color: #22282B;
-    }
-
-    .topic-card p {
-      font-size: 13px;
-      line-height: 1.4;
-      color: #22282B;
-      opacity: 0.9;
-      margin-bottom: 12px;
-    }
-
-    .topic-card a {
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      color: #01761B;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=2.0">
 </head>
-<style>
-            .navbar {
-          max-width: 982px;
-          margin: 0 auto;
-          padding: 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-    
-        .navbar__logo {
-          font-size: 16.37px;
-          font-weight: 700;
-          color: #22282B;
-        }
-    
-        .navbar__center a {
-          margin: 0 12px;
-          text-decoration: none;
-          color: #22282B;
-          font-size: 14px;
-        }
-</style>
-<body>
-  <div class="layout-wrapper">
-    <!-- ✅ NAVBAR -->
-    <div class="navbar">
-        <div class="navbar__logo">Life 101</div>
+
+<body class="resourcespage">
+
+
+  <!-- NAVBAR (consistent on all pages) -->
+  <div class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
+      </div>
+      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
+      <div class="navbar__menu" id="mobileMenu">
         <nav class="navbar__center">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="topics.html">Topics</a>
           <a href="resources.html">Resources</a>
           <a href="blog.html">Blog</a>
-          <a href="signup.html" class="navbar__register-btn">Register Today!</a>
         </nav>
-      </div>
-
-    <!-- ✅ Header -->
-    <h1 class="hero__title">Explore Our Resources</h1>
-    <p class="hero__desc">
-      Practical tools, planners, and guides to help you take the next step into adulthood. <br />
-      Click any resource to start using it today.
-    </p>
-
-    <!-- ✅ Resource Cards -->
-    <div class="topics-grid">
-      <div class="topic-card">
-        <h2>📅 Weekly Meal Planner</h2>
-        <p>Plan your meals, grocery trips, and nutrition goals with ease. Perfect for busy weeks.</p>
-        <a href="#">Download</a>
-      </div>
-
-      <div class="topic-card">
-        <h2>📄 Resume Template & Career Guide</h2>
-        <p>Build a clean resume and prep for job interviews with this beginner-friendly toolkit.</p>
-        <a href="#">Access Now</a>
-      </div>
-
-      <div class="topic-card">
-        <h2>✅ Habit Tracker & Routine Generator</h2>
-        <p>Set daily goals, build consistency, and create a sustainable routine that fits your life.</p>
-        <a href="#">Get Started</a>
-      </div>
-
-      <div class="topic-card">
-        <h2>💸 Budget Planner</h2>
-        <p>Track expenses, set savings goals, and get your finances organized without stress.</p>
-        <a href="#">Download</a>
-      </div>
-
-      <div class="topic-card">
-        <h2>🤝 Community & Mentorship</h2>
-        <p>Connect with others on the same journey or find a mentor to help guide your way.</p>
-        <a href="#">Join the Waitlist</a>
-      </div>
-
-      <div class="topic-card">
-        <h2>👶 Family Planning (Parenthood 101)</h2>
-        <p>Understand the basics of parenting, budgeting for baby, and building a family routine.</p>
-        <a href="#">Explore More</a>
+        <div class="navbar__auth">
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="layout-wrapper"></div>
+
+  <!-- ✅ Header -->
+  <h1 class="hero__title">Explore Our Resources</h1>
+  <p class="hero__desc">
+    Practical tools, planners, and guides to help you take the next step into adulthood. <br />
+    Click any resource to start using it today.
+  </p>
+
+  <!-- ✅ Resource Cards -->
+  <div class="topics-grid">
+    <div class="topic-card">
+      <h2>📅 Weekly Meal Planner</h2>
+      <p>Plan your meals, grocery trips, and nutrition goals with ease. Perfect for busy weeks.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="topic-card">
+      <h2>📄 Resume Template & Career Guide</h2>
+      <p>Build a clean resume and prep for job interviews with this beginner-friendly toolkit.</p>
+      <a href="#">Access Now</a>
+    </div>
+
+    <div class="topic-card">
+      <h2>✅ Habit Tracker & Routine Generator</h2>
+      <p>Set daily goals, build consistency, and create a sustainable routine that fits your life.</p>
+      <a href="#">Get Started</a>
+    </div>
+
+    <div class="topic-card">
+      <h2>💸 Budget Planner</h2>
+      <p>Track expenses, set savings goals, and get your finances organized without stress.</p>
+      <a href="#">Download</a>
+    </div>
+
+    <div class="topic-card">
+      <h2>🤝 Community & Mentorship</h2>
+      <p>Connect with others on the same journey or find a mentor to help guide your way.</p>
+      <a href="#">Join the Waitlist</a>
+    </div>
+
+    <div class="topic-card">
+      <h2>👶 Family Planning (Parenthood 101)</h2>
+      <p>Understand the basics of parenting, budgeting for baby, and building a family routine.</p>
+      <a href="#">Explore More</a>
+    </div>
+  </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
 </body>
+
 </html>

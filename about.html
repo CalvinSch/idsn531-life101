@@ -8,167 +8,39 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Manrope', sans-serif;
-      background: white;
-      overflow-x: hidden;
-    }
-
-    .navbar {
-      max-width: 982px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .navbar__logo {
-      font-size: 16.37px;
-      font-weight: 700;
-      color: #22282B;
-    }
-
-    .navbar__center a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #22282B;
-      font-size: 14px;
-    }
-
-    .navbar__auth .navbar__signup {
-      padding: 8px 16px;
-      background-color: #01761B;
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .layout-wrapper {
-      max-width: 982px;
-      margin: 0 auto;
-      padding: 120px 20px 60px;
-      /* ⬅ SAME as blog.html */
-    }
-
-    .hero__title {
-      text-align: center;
-      color: #22282B;
-      font-size: 49.1px;
-      font-weight: 700;
-      margin-bottom: 40px;
-      text-transform: capitalize;
-    }
-
-    .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .team-card {
-      width: 200px;
-      background: #FAFAFA;
-      border: 1px solid #E3E3E3;
-      border-radius: 8px;
-      text-align: center;
-      padding: 24px 20px;
-      transition: all 0.2s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 450px;
-      /* updated to accommodate longer bios */
-    }
-
-    .team-card:hover {
-      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
-      transform: translateY(-3px);
-    }
-
-    .team-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
-
-    .stats__number {
-      font-size: 18px;
-      line-height: 1.2;
-      font-weight: 600;
-      color: #22282B;
-      margin-bottom: 10px;
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .stats__label {
-      font-size: 12.27px;
-      line-height: 15.96px;
-      color: #22282B;
-      font-weight: 500;
-      margin-bottom: 12px;
-      word-break: break-word;
-      max-height: 300px;
-      overflow-y: auto;
-      padding-right: 4px;
-    }
-
-    .team-card ul {
-      list-style: none;
-      padding: 0;
-      margin-top: auto;
-      text-align: center;
-    }
-
-    .team-card ul li {
-      font-size: 12.27px;
-      line-height: 15.96px;
-      color: #22282B;
-      margin-top: 4px;
-    }
-
-    /* Optional: style scrollbar if it appears */
-    .stats__label::-webkit-scrollbar {
-      width: 4px;
-    }
-
-    .stats__label::-webkit-scrollbar-thumb {
-      background: #ccc;
-      border-radius: 10px;
-    }
-  </style>
 </head>
 
-<body>
+<body class="aboutpage">
+
+  <!-- NAVBAR (consistent on all pages) -->
+  <div class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
+      </div>
+      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
+      <div class="navbar__menu" id="mobileMenu">
+        <nav class="navbar__center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="resources.html">Resources</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="navbar__auth">
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ✅ CENTERED WRAPPER -->
   <div class="layout-wrapper">
 
-    <!-- ✅ NAVBAR using original class -->
-    <div class="navbar">
-      <div class="navbar__logo">Life 101</div>
-      <nav class="navbar__center">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="topics.html">Topics</a>
-        <a href="resources.html">Resources</a>
-        <a href="blog.html">Blog</a>
-        <a href="signup.html" class="navbar__register-btn">Register Today!</a>
-      </nav>
-    </div>
+
 
     <!-- ✅ CONTENT -->
     <section class="team-section">
@@ -205,9 +77,12 @@
           <img src="http://iyawebdev.com/idsn531/20251/cschaul.jpg" alt="Calvin Schaul">
           <div class="stats__number">Calvin Schaul</div>
           <div class="stats__label">
-            Calvin Schaul is an engineer, animator, and developer with a passion for creating well-designed experiences that help and inspire others. He
-            has a background in feature film at Disney and DreamWorks and is currently a Creative Technologist at Duolingo. His
-            undergraduate education is in Computer Engineering and he is pursuing a Masters in Integrated Design, Business, and
+            Calvin Schaul is an engineer, animator, and developer with a passion for creating well-designed experiences
+            that help and inspire others. He
+            has a background in feature film at Disney and DreamWorks and is currently a Creative Technologist at
+            Duolingo. His
+            undergraduate education is in Computer Engineering and he is pursuing a Masters in Integrated Design,
+            Business, and
             Technology at USC.
           </div>
           <ul>
@@ -232,14 +107,23 @@
         <div class="team-card">
           <img src="http://iyawebdev.com/idsn531/20251/pemcnama.jpg" alt="Paige McNamara-Pittler">
           <div class="stats__number">Paige McNamara-Pittler</div>
-          <div class="stats__label">Paige McNamara-Pittler is an experienced developer and financial expert with expertise in bringing innovative technical solutions to fast-paced, critical business funcitons.
-            Paige has extensive experience across the financial industry while also honing her design skills through a Masters in Integrated Design, Business, and Technology at USC. She is passionate about using technology to solve real-world problems and make a positive impact.</div>
-          </div>
+          <div class="stats__label">Paige McNamara-Pittler is an experienced developer and financial expert with
+            expertise in bringing innovative technical solutions to fast-paced, critical business funcitons.
+            Paige has extensive experience across the financial industry while also honing her design skills through a
+            Masters in Integrated Design, Business, and Technology at USC. She is passionate about using technology to
+            solve real-world problems and make a positive impact.</div>
         </div>
-
       </div>
-    </section>
+
   </div>
+  </section>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
 </body>
 
 </html>
