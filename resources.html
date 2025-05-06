@@ -1,94 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resources | Life 101</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2.0">
-  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Life 101: practical tools and planners for adulthood">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/Favicon.png">
+
+  <!-- Google Font: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <title>Resources — Life 101</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body class="resourcespage">
-
-
-  <!-- NAVBAR (consistent on all pages) -->
-  <div class="navbar">
+<body>
+  <!-- Header / Navbar (from base.html) -->
+  <header class="navbar">
     <div class="navbar__wrapper">
-      <div class="navbar__logo">
-        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
-      </div>
-      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
-      <div class="navbar__menu" id="mobileMenu">
-        <nav class="navbar__center">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="topics.html">Topics</a>
-          <a href="resources.html">Resources</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-        <div class="navbar__auth">
-          <a href="signin.html">Sign In</a>
-          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+      <a href="index.html" class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;">
+      </a>
+      <button class="navbar__burger" aria-label="Toggle navigation">☰</button>
+      <nav class="navbar__menu">
+        <a href="index.html"   class="navbar__link">Home</a>
+        <a href="about.html"   class="navbar__link">About</a>
+        <a href="topics.html"  class="navbar__link">Topics</a>
+        <a href="resources.html" class="navbar__link">Resources</a>
+        <a href="blog.html"    class="navbar__link">Blog</a>
+        <a href="signin.html"  class="navbar__link navbar__signin">Sign In</a>
+        <a href="signup.html"  class="btn btn--primary navbar__signup">
+          <span>Register Today!</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="layout-wrapper">
+    <section class="resources-section">
+      <h1 class="hero__title">Explore Our Resources</h1>
+      <p class="hero__desc">
+        Practical tools, planners, and guides to help you take the next step into adulthood.<br>
+        Click any resource to start using it today.
+      </p>
+
+      <div class="topics-grid">
+        <div class="card topic-card">
+          <h2>📅 Weekly Meal Planner</h2>
+          <p>Plan your meals, grocery trips, and nutrition goals with ease. Perfect for busy weeks.</p>
+          <a href="#" class="btn btn--primary topic-card__btn">Download</a>
+        </div>
+
+        <div class="card topic-card">
+          <h2>📄 Resume Template & Career Guide</h2>
+          <p>Build a clean resume and prep for job interviews with this beginner-friendly toolkit.</p>
+          <a href="#" class="btn btn--primary topic-card__btn">Access Now</a>
+        </div>
+
+        <div class="card topic-card">
+          <h2>✅ Habit Tracker & Routine Generator</h2>
+          <p>Set daily goals, build consistency, and create a sustainable routine that fits your life.</p>
+          <a href="#" class="btn btn--primary topic-card__btn">Get Started</a>
+        </div>
+
+        <div class="card topic-card">
+          <h2>💸 Budget Planner</h2>
+          <p>Track expenses, set savings goals, and get your finances organized without stress.</p>
+          <a href="#" class="btn btn--primary topic-card__btn">Download</a>
+        </div>
+
+        <div class="card topic-card">
+          <h2>🤝 Community & Mentorship</h2>
+          <p>Connect with others on the same journey or find a mentor to help guide your way.</p>
+          <a href="#" class="btn btn--primary topic-card__btn">Join the Waitlist</a>
+        </div>
+
+        <div class="card topic-card">
+          <h2>👶 Family Planning (Parenthood 101)</h2>
+          <p>Understand the basics of parenting, budgeting for baby, and building a family routine.</p>
+          <a href="#" class="btn btn--primary topic-card__btn">Explore More</a>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="layout-wrapper"></div>
+  <!-- Footer (from base.html) -->
+  <footer class="site-footer layout-wrapper">
+    <p></p>
+  </footer>
 
-  <!-- ✅ Header -->
-  <h1 class="hero__title">Explore Our Resources</h1>
-  <p class="hero__desc">
-    Practical tools, planners, and guides to help you take the next step into adulthood. <br />
-    Click any resource to start using it today.
-  </p>
-
-  <!-- ✅ Resource Cards -->
-  <div class="topics-grid">
-    <div class="topic-card">
-      <h2>📅 Weekly Meal Planner</h2>
-      <p>Plan your meals, grocery trips, and nutrition goals with ease. Perfect for busy weeks.</p>
-      <a href="#">Download</a>
-    </div>
-
-    <div class="topic-card">
-      <h2>📄 Resume Template & Career Guide</h2>
-      <p>Build a clean resume and prep for job interviews with this beginner-friendly toolkit.</p>
-      <a href="#">Access Now</a>
-    </div>
-
-    <div class="topic-card">
-      <h2>✅ Habit Tracker & Routine Generator</h2>
-      <p>Set daily goals, build consistency, and create a sustainable routine that fits your life.</p>
-      <a href="#">Get Started</a>
-    </div>
-
-    <div class="topic-card">
-      <h2>💸 Budget Planner</h2>
-      <p>Track expenses, set savings goals, and get your finances organized without stress.</p>
-      <a href="#">Download</a>
-    </div>
-
-    <div class="topic-card">
-      <h2>🤝 Community & Mentorship</h2>
-      <p>Connect with others on the same journey or find a mentor to help guide your way.</p>
-      <a href="#">Join the Waitlist</a>
-    </div>
-
-    <div class="topic-card">
-      <h2>👶 Family Planning (Parenthood 101)</h2>
-      <p>Understand the basics of parenting, budgeting for baby, and building a family routine.</p>
-      <a href="#">Explore More</a>
-    </div>
-  </div>
-  </div>
+  <script src="js/navbar.js"></script>
   <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
+    document.querySelector('footer p').textContent =
+      `© ${new Date().getFullYear()} Life 101. All rights reserved.`;
   </script>
 </body>
-
 </html>

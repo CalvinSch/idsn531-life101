@@ -1,182 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Self-Care Isn't Selfish: Building Your Physical and Mental Wellness Routine | Life 101</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.0">
-  <link rel="icon" type="image/png" href="img/Favicon.png">
-  <style>
-    body.article-page {
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .layout-wrapper {
-      border: 1px solid #E3E3E3;
-      border-radius: 8px;
-      padding: 40px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__title {
-      text-align: center;
-      width: 100%;
-      color: #22282B;
-      font-size: 49.1px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-transform: capitalize;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__desc {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #22282B;
-      font-size: 12.27px;
-      font-weight: 500;
-      line-height: 18px;
-      opacity: 0.85;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content {
-      margin-top: 30px;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content h2 {
-      font-size: 24px;
-      margin: 30px 0 20px;
-      color: #22282B;
-      font-weight: 600;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content p {
-      margin-bottom: 20px;
-      line-height: 1.6;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content blockquote {
-      border-left: 3px solid #01761B;
-      padding-left: 20px;
-      margin: 30px 0;
-      font-style: italic;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author {
-      margin-top: 40px;
-      padding: 20px;
-      background: #FAFAFA;
-      border-radius: 8px;
-      border: 1px solid #E3E3E3;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author h3 {
-      margin: 0 0 10px 0;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    /* Media queries for article page */
-    .article-content img {
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 8px;
-      margin: 20px auto;
-      display: block;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    @media (max-width: 480px) {
-      .article-page .layout-wrapper {
-        padding: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-      
-      .article-content h2 {
-        font-size: 20px;
-      }
-      
-      .article-content p, 
-      .article-content blockquote {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
+  <title>Self-Care Isn't Selfish: Building Your Physical and Mental Wellness Routine — Life 101</title>
+  <meta name="description" content="Discover how prioritizing your well-being empowers you to show up better for yourself and others, with practical strategies for creating sustainable self-care practices.">
 
-<body class="blogpage article-page">
-  <!-- NAVBAR (for blogposts/*.html pages) -->
-  <div class="navbar">
+  <!-- Favicon -->
+  <link rel="icon" href="../img/Favicon.png">
+
+  <!-- Google Font: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="article-page">
+  <!-- Header / Navbar -->
+  <header class="navbar">
     <div class="navbar__wrapper">
-      <div class="navbar__logo">
-        <img src="../img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
-      </div>
-      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
-      <div class="navbar__menu" id="mobileMenu">
-        <nav class="navbar__center">
-          <a href="../index.html">Home</a>
-          <a href="../about.html">About</a>
-          <a href="../topics.html">Topics</a>
-          <a href="../resources.html">Resources</a>
-          <a href="../blog.html">Blog</a>
-        </nav>
-        <div class="navbar__auth">
-          <a href="../signin.html">Sign In</a>
-          <a href="../signup.html" class="navbar__signup"><span>Register Today!</span></a>
-        </div>
-      </div>
+      <a href="../index.html" class="navbar__logo">
+        <img src="../img/green-logo.png" alt="Life 101 Logo">
+      </a>
+      <button class="navbar__burger" aria-label="Toggle navigation">☰</button>
+      <nav class="navbar__menu">
+        <a href="../index.html" class="navbar__link">Home</a>
+        <a href="../about.html" class="navbar__link">About</a>
+        <a href="../topics.html" class="navbar__link">Topics</a>
+        <a href="../resources.html" class="navbar__link">Resources</a>
+        <a href="../blog.html" class="navbar__link">Blog</a>
+        <a href="../signin.html" class="navbar__link navbar__signin">Sign In</a>
+        <a href="../signup.html" class="btn btn--primary navbar__signup">
+          <span>Register Today!</span>
+        </a>
+      </nav>
     </div>
-  </div>
-  
-  <div class="layout-wrapper">
+  </header>
+
+  <!-- Main Article -->
+  <main id="main-content" class="layout-wrapper article-page__wrapper">
     <h1 class="hero__title">Self-Care Isn't Selfish: Building Your Physical and Mental Wellness Routine</h1>
-    <p class="hero__desc">Discover how prioritizing your well-being empowers you to show up better for yourself and others, with practical strategies for creating sustainable self-care practices.</p>
-    
+    <p class="hero__desc">
+      Discover how prioritizing your well-being empowers you to show up better for yourself and others, with practical strategies for creating sustainable self-care practices.
+    </p>
+
     <article class="article-content">
-      <img src="running.png" alt="Person running outdoors as part of self-care routine">
+      <img src="../img/running.png" alt="Person running outdoors as part of self-care routine">
 
       <section>
         <h2>Why Self-Care Matters More Than Ever</h2>
-        
         <p>
           In our hyper-connected, achievement-oriented world, self-care has wrongly gained a reputation as an indulgent luxury or selfish pursuit. This fundamental misunderstanding prevents many young adults from establishing the wellness practices they desperately need—particularly as they navigate the increasing demands of education, career, relationships, and independent living.
         </p>
-        
         <p>
           The reality is quite the opposite: consistent self-care is the foundation that enables everything else in your life to flourish. Like the safety instructions on airplanes remind us to secure our own oxygen mask before helping others, attending to your physical and mental well-being isn't self-indulgent—it's a prerequisite for showing up fully in all areas of your life.
         </p>
-        
         <p>
           Research consistently shows that neglecting self-care doesn't just impact individual well-being but leads to decreased productivity, strained relationships, and diminished capacity to handle life's inevitable challenges. The burnout epidemic affecting so many young professionals isn't a badge of honor but a warning sign of unsustainable patterns.
         </p>
-        
         <p>
           True self-care goes far beyond occasional spa days or retail therapy. It encompasses intentional practices that nourish your physical body, emotional landscape, intellectual growth, social connections, and sense of purpose. When approached holistically and integrated into daily life, these practices create resilience against stress and lay the groundwork for lasting fulfillment.
         </p>
@@ -184,23 +70,18 @@
 
       <section>
         <h2>Understanding Your Body's Needs</h2>
-        
         <p>
           Your physical well-being forms the baseline for everything else in your life. When your body's fundamental needs are neglected, even the most motivated mind struggles to perform optimally. Yet many young adults push their bodies to the limit, operating on inadequate sleep, poor nutrition, and minimal movement while expecting peak performance.
         </p>
-        
         <p>
           Sleep deserves particular attention as perhaps the most undervalued component of physical wellness. Research consistently demonstrates that quality sleep impacts everything from cognitive function and emotional regulation to immune health and metabolism. Rather than viewing sleep as time "wasted," recognize it as the essential restoration your brain and body require.
         </p>
-        
         <p>
           Nutrition provides another cornerstone of physical self-care. This doesn't mean adhering to restrictive diets or following the latest food trends, but rather developing a relationship with food that emphasizes nourishment, enjoyment, and energy. Simple shifts—like incorporating more whole foods, staying adequately hydrated, and eating mindfully—can transform how you feel on a daily basis.
         </p>
-        
         <p>
           Movement completes the physical wellness triad. The key is finding activities you genuinely enjoy rather than forcing yourself through exercise you dread. Whether it's dancing, hiking, strength training, yoga, or simply walking regularly, sustainable physical activity should leave you feeling energized rather than depleted.
         </p>
-        
         <blockquote>
           Honor your body's signals rather than overriding them. Fatigue, persistent aches, digestive issues, and frequent illness aren't just inconveniences to push through—they're important communication from your body that deserves attention.
         </blockquote>
@@ -208,19 +89,15 @@
 
       <section>
         <h2>Mental Wellness: Beyond Positive Thinking</h2>
-        
         <p>
           While physical self-care provides the foundation, mental wellness practices help you navigate the complexity of your inner landscape. This goes far beyond simplistic "positive thinking" to encompass how you relate to the full spectrum of your thoughts and emotions.
         </p>
-        
         <p>
           Mindfulness serves as a cornerstone practice, training your awareness to engage with the present moment without judgment. This doesn't require lengthy meditation sessions—even brief moments of conscious attention throughout your day can gradually shift your relationship with stress, anxiety, and rumination. Start with simple awareness of your breath, sensations in your body, or fully engaging with a routine activity like washing dishes or walking.
         </p>
-        
         <p>
           Emotional literacy—the ability to identify, understand, and appropriately express your feelings—provides another essential skill. Many young adults have never been taught to distinguish between similar emotions (like anxiety versus excitement) or to recognize how emotions manifest in their bodies. Learning this emotional vocabulary allows you to respond to your needs rather than reacting unconsciously to triggers.
         </p>
-        
         <p>
           Boundary-setting completes the mental wellness toolkit. Without clear boundaries, you'll likely find yourself overcommitted, resentful, and emotionally drained. Start by identifying areas where you consistently feel depleted or taken advantage of. Practice using phrases like "I'm not available for that," "This doesn't work for me," or "I need some time to consider before responding." Remember that boundaries aren't about controlling others but about taking responsibility for your own well-being.
         </p>
@@ -228,23 +105,18 @@
 
       <section>
         <h2>Digital Wellness in a Connected World</h2>
-        
         <p>
           The omnipresence of technology in modern life creates unprecedented challenges for self-care. While digital tools offer tremendous benefits, unmanaged technology use often undermines the very wellness practices you're trying to establish. Developing intentional digital habits is no longer optional but essential for mental and physical health.
         </p>
-        
         <p>
           Start by auditing your current technology use. Most smartphones now include screen time tracking features that reveal not just how much time you spend on devices but how you're distributing that attention. This data, while sometimes uncomfortable to confront, provides valuable insights about digital habits that may be displacing your self-care priorities.
         </p>
-        
         <p>
           Create technology-free zones and times in your life. Perhaps your bedroom remains device-free to protect sleep quality, or the first hour after waking is reserved for personal practices rather than email and social media. These boundaries help prevent the constant connectivity that fragments attention and increases stress hormones.
         </p>
-        
         <p>
           Be particularly mindful of social media consumption, which research increasingly links to comparison, inadequacy, and anxiety—especially among young adults. Consider following accounts that genuinely inspire you and limiting or removing those that trigger negative self-talk or FOMO (fear of missing out). Remember that social media presents carefully curated highlights rather than the full reality of others' lives.
         </p>
-        
         <blockquote>
           Your attention is one of your most precious resources. Each time you reach for your phone, ask yourself: "Is this how I want to invest my limited time and mental energy right now?"
         </blockquote>
@@ -252,19 +124,15 @@
 
       <section>
         <h2>Building a Sustainable Self-Care Routine</h2>
-        
         <p>
           Knowledge about self-care practices only creates change when translated into consistent action. Rather than attempting a complete lifestyle overhaul—which typically leads to overwhelm and abandonment—focus on gradually building sustainable habits that integrate naturally into your daily life.
         </p>
-        
         <p>
           Start by identifying your non-negotiables—the foundational practices that make the biggest difference in how you feel and function. For many, this includes adequate sleep, some form of movement, moments of mindfulness, and meaningful connection. Protect these priorities by scheduling them into your calendar with the same commitment you'd give to important work meetings or social obligations.
         </p>
-        
         <p>
           Anchor new habits to existing routines through a practice behavioral scientists call "habit stacking." For instance, you might do a brief stretching sequence immediately after brushing your teeth, practice three mindful breaths before checking email, or take a moment of gratitude before eating. These contextual cues help bypass the need for willpower by making the new behavior automatic.
         </p>
-        
         <p>
           Remember that consistency matters more than duration. A five-minute daily meditation practice yields more benefit than an occasional hour-long session. Similarly, brief movement breaks throughout your day can be more sustainable than lengthy workouts that require significant time blocks and motivation.
         </p>
@@ -272,19 +140,15 @@
 
       <section>
         <h2>Overcoming Self-Care Obstacles</h2>
-        
         <p>
           Despite understanding the importance of self-care, most young adults encounter significant obstacles when attempting to prioritize their well-being. Recognizing and strategically addressing these barriers increases your likelihood of maintaining wellness practices long-term.
         </p>
-        
         <p>
           Time constraints represent the most commonly cited obstacle. When life feels overwhelmingly busy, self-care activities are often the first to be sacrificed. Combat this by recognizing that many effective practices require minimal time—even thirty seconds of conscious breathing or a five-minute walking break yields benefits. Additionally, certain forms of self-care actually create time by increasing your energy, focus, and efficiency.
         </p>
-        
         <p>
           Perfectionism derails many self-care attempts through all-or-nothing thinking. You might abandon a nutrition plan after one unplanned indulgence or give up on meditation because your mind feels busy. Remember that self-care is about progress, not perfection. A "good enough" approach consistently applied will yield far greater benefits than perfectionist ideals sporadically attempted.
         </p>
-        
         <p>
           Guilt presents another significant barrier, particularly for those who've internalized messages that prioritizing their own needs is somehow selfish. Challenge this thinking by recognizing how your well-being directly impacts your capacity to contribute to others. Self-care isn't about withdrawing from responsibilities but about showing up for them with greater presence, energy, and compassion.
         </p>
@@ -292,23 +156,18 @@
 
       <section>
         <h2>Self-Care in Relationship with Others</h2>
-        
         <p>
           While personal practices form the foundation of self-care, your relationships profoundly impact your capacity to maintain wellness. Learning to navigate social connections in ways that support rather than undermine your well-being represents an advanced form of self-care.
         </p>
-        
         <p>
           Start by assessing your current relationships honestly. Which connections leave you feeling energized, inspired, and accepted? Which consistently drain your energy, trigger insecurity, or require you to diminish yourself? While not all difficult relationships can (or should) be abandoned, becoming conscious of these patterns allows you to set appropriate boundaries.
         </p>
-        
         <p>
           Communication about your needs and boundaries often feels uncomfortable at first but becomes easier with practice. Simple statements like "I need some alone time to recharge" or "I'm working on being more present, so I'm limiting evening screen time" help others understand your choices without requiring lengthy justifications.
         </p>
-        
         <p>
           Consider creating self-care accountability partnerships with friends who share similar wellness goals. Regular check-ins, shared activities, and gentle encouragement can significantly increase consistency. These relationships work best when focused on mutual support rather than comparison or competition.
         </p>
-        
         <blockquote>
           The people closest to you will either reinforce or undermine your self-care practices. Choose your inner circle wisely, and don't hesitate to educate those you love about how they can support your well-being journey.
         </blockquote>
@@ -316,19 +175,15 @@
 
       <section>
         <h2>From Self-Care to Community Care</h2>
-        
         <p>
           As your personal self-care practice matures, you may notice an expanding capacity to extend that same quality of attention toward your community. This evolution from individual to collective well-being represents a natural progression rather than a separate pursuit.
         </p>
-        
         <p>
           Consider how your personal choices impact the broader systems you participate in. Does your pursuit of convenience create unsustainable burdens for others? Do your consumption patterns align with your values regarding environmental and social justice? These questions aren't meant to induce guilt but to invite reflection on how personal well-being connects to collective flourishing.
         </p>
-        
         <p>
           Explore ways your skills and passions might contribute to community care. Perhaps your experience with mindfulness could support a friend navigating anxiety, or your cooking abilities could provide nourishment for a neighbor during a difficult time. These contributions don't require grand gestures—small acts of attention and generosity create meaningful ripples.
         </p>
-        
         <p>
           Remember that advocating for systemic changes that support well-being for all—such as workplace policies that respect work-life boundaries or community spaces that encourage connection—represents a powerful form of care that extends beyond individual practices.
         </p>
@@ -336,36 +191,40 @@
 
       <section>
         <h2>Conclusion: Self-Care as an Evolving Practice</h2>
-        
         <p>
           The journey of self-care isn't a destination to reach but an ongoing relationship with yourself that evolves through different life phases. What nourishes you in one season might change in another, requiring continuous attention and adjustment rather than rigid adherence to any particular system.
         </p>
-        
         <p>
           As you navigate this ever-changing landscape, maintain a spirit of curiosity and compassion toward yourself. Notice what practices truly support your thriving versus those you pursue out of obligation or external expectations. Your body and mind will provide clear feedback if you're willing to listen without judgment.
         </p>
-        
         <p>
           Remember that setbacks and inconsistency are normal aspects of any meaningful practice. Each moment offers a fresh opportunity to choose self-care, regardless of previous choices. This non-linear path, with its inevitable cycles of commitment and reconnection, is not a sign of failure but the natural rhythm of growth.
         </p>
-        
         <p>
           Perhaps most importantly, recognize that caring for yourself isn't separate from caring for others or the world—it's the foundation that makes those broader expressions of care possible and sustainable. By tending to your own well-being with attention and intention, you cultivate the capacity to contribute your unique gifts with greater impact and authenticity.
         </p>
       </section>
 
-      <!-- Author Bio -->
       <div class="article-author">
         <h3>By Life 101</h3>
-        <p>Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.</p>
+        <p>
+          Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.
+        </p>
       </div>
-
     </article>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer layout-wrapper">
+    <p></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/navbar.js"></script>
   <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
+    // Auto-inject current year
+    document.querySelector('footer p').textContent =
+      `© ${new Date().getFullYear()} Life 101. All rights reserved.`;
   </script>
 </body>
 </html>

@@ -1,182 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kitchen Confidence: Essential Cooking Skills Every Adult Should Master | Life 101</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.0">
-  <link rel="icon" type="image/png" href="img/Favicon.png">
-  <style>
-    body.article-page {
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .layout-wrapper {
-      border: 1px solid #E3E3E3;
-      border-radius: 8px;
-      padding: 40px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__title {
-      text-align: center;
-      width: 100%;
-      color: #22282B;
-      font-size: 49.1px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-transform: capitalize;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__desc {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #22282B;
-      font-size: 12.27px;
-      font-weight: 500;
-      line-height: 18px;
-      opacity: 0.85;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content {
-      margin-top: 30px;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content h2 {
-      font-size: 24px;
-      margin: 30px 0 20px;
-      color: #22282B;
-      font-weight: 600;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content p {
-      margin-bottom: 20px;
-      line-height: 1.6;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content blockquote {
-      border-left: 3px solid #01761B;
-      padding-left: 20px;
-      margin: 30px 0;
-      font-style: italic;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author {
-      margin-top: 40px;
-      padding: 20px;
-      background: #FAFAFA;
-      border-radius: 8px;
-      border: 1px solid #E3E3E3;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author h3 {
-      margin: 0 0 10px 0;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    /* Media queries for article page */
-    .article-content img {
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 8px;
-      margin: 20px auto;
-      display: block;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    @media (max-width: 480px) {
-      .article-page .layout-wrapper {
-        padding: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-      
-      .article-content h2 {
-        font-size: 20px;
-      }
-      
-      .article-content p, 
-      .article-content blockquote {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
+  <meta name="description" content="Discover the fundamental techniques and knowledge that will transform you from a reluctant cook to a confident home chef.">
 
-<body class="blogpage article-page">
-  <!-- NAVBAR (for blogposts/*.html pages) -->
-  <div class="navbar">
+  <!-- Favicon -->
+  <link rel="icon" href="../img/Favicon.png">
+
+  <!-- Google Font: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="article-page">
+  <!-- Header / Navbar -->
+  <header class="navbar">
     <div class="navbar__wrapper">
-      <div class="navbar__logo">
-        <img src="../img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
-      </div>
-      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
-      <div class="navbar__menu" id="mobileMenu">
-        <nav class="navbar__center">
-          <a href="../index.html">Home</a>
-          <a href="../about.html">About</a>
-          <a href="../topics.html">Topics</a>
-          <a href="../resources.html">Resources</a>
-          <a href="../blog.html">Blog</a>
-        </nav>
-        <div class="navbar__auth">
-          <a href="../signin.html">Sign In</a>
-          <a href="../signup.html" class="navbar__signup"><span>Register Today!</span></a>
-        </div>
-      </div>
+      <a href="../index.html" class="navbar__logo">
+        <img src="../img/green-logo.png" alt="Life 101 Logo">
+      </a>
+      <button class="navbar__burger" aria-label="Toggle navigation">☰</button>
+      <nav class="navbar__menu">
+        <a href="../index.html" class="navbar__link">Home</a>
+        <a href="../about.html" class="navbar__link">About</a>
+        <a href="../topics.html" class="navbar__link">Topics</a>
+        <a href="../resources.html" class="navbar__link">Resources</a>
+        <a href="../blog.html" class="navbar__link">Blog</a>
+        <a href="../signin.html" class="navbar__link navbar__signin">Sign In</a>
+        <a href="../signup.html" class="btn btn--primary navbar__signup">
+          <span>Register Today!</span>
+        </a>
+      </nav>
     </div>
-  </div>
-  
-  <div class="layout-wrapper">
+  </header>
+
+  <!-- Main Article -->
+  <main id="main-content" class="layout-wrapper article-page__wrapper">
     <h1 class="hero__title">Kitchen Confidence: Essential Cooking Skills Every Adult Should Master</h1>
-    <p class="hero__desc">Discover the fundamental techniques and knowledge that will transform you from a reluctant cook to a confident home chef—saving money, improving your health, and adding joy to daily life.</p>
-    
+    <p class="hero__desc">
+      Discover the fundamental techniques and knowledge that will transform you from a reluctant cook to a confident home chef—saving money, improving your health, and adding joy to daily life.
+    </p>
+
     <article class="article-content">
-      <img src="kitchenconfidence.png" alt="Person confidently cooking in a kitchen">
+      <img src="../img/kitchenconfidence.png" alt="Person confidently cooking in a kitchen">
 
       <section>
         <h2>Why Cooking Skills Matter in Adulthood</h2>
-        
         <p>
           In a world of convenient takeout and meal delivery services, cooking at home might seem like an optional skill rather than an essential one. Yet the ability to prepare your own meals remains one of the most empowering and practical capabilities you can develop as an adult—with benefits extending far beyond simply feeding yourself.
         </p>
-        
         <p>
           Financial freedom receives a significant boost from cooking skills. The average American who dines out regularly spends between $2,000 and $3,000 annually on restaurant meals. Even modest cooking abilities can reduce this expense dramatically, freeing those resources for other priorities like debt reduction, savings, or experiences that genuinely enrich your life.
         </p>
-        
         <p>
           Health and nutrition improve naturally when you control what goes into your food. Restaurant meals typically contain significantly more sodium, sugar, and unhealthy fats than home-cooked alternatives. By preparing even simple meals yourself, you gain awareness of ingredients and develop the ability to adjust them according to your preferences and nutritional needs.
         </p>
-        
         <p>
           Perhaps most surprisingly, cooking offers profound psychological benefits. The process of creating something tangible with your hands provides a sense of accomplishment often missing from digital-focused work lives. Many find that cooking offers a meditative quality that reduces stress and anxiety while providing an accessible creative outlet.
         </p>
@@ -184,23 +71,18 @@
 
       <section>
         <h2>Setting Up for Success: Kitchen Essentials</h2>
-        
         <p>
           Before diving into cooking techniques, creating a functional kitchen environment sets the foundation for success. This doesn't require expensive equipment or expansive space—even a minimal kitchen can support impressive culinary achievements when thoughtfully organized.
         </p>
-        
         <p>
           Start with essential tools rather than specialized gadgets. Quality matters more than quantity, so invest in a few well-made basics: a chef's knife (8-inch is versatile for most tasks), cutting board, stainless steel skillet, medium saucepan, and rimmed baking sheet create a foundation for countless meals. Add essential measuring tools (cups and spoons), mixing bowls, and a colander to complete your starter kit.
         </p>
-        
         <p>
           Organize your workspace for efficiency, applying principles professional chefs use. Keep frequently used items within easy reach. Arrange your preparation area near your stovetop to minimize movement while cooking. Store similar items together (baking supplies, spices, cooking oils) so you can quickly locate what you need.
         </p>
-        
         <p>
           Build a foundational pantry gradually. Begin with versatile ingredients that support multiple recipes: olive oil, kosher salt, black pepper, garlic, onions, canned tomatoes, dried pasta, rice, flour, and a few herbs and spices you enjoy. This modest investment enables you to prepare countless meals without daily grocery trips.
         </p>
-        
         <blockquote>
           A well-organized kitchen reduces both the mental and physical friction that often discourages cooking. When tools are accessible and ingredients ready, preparing a simple meal can take less time than ordering delivery.
         </blockquote>
@@ -208,19 +90,15 @@
 
       <section>
         <h2>Foundational Technique: Knife Skills</h2>
-        
         <p>
           Of all cooking fundamentals, none impacts your kitchen efficiency and safety more than basic knife skills. Proper cutting techniques not only speed preparation but ensure ingredients cook evenly and help prevent the kitchen injuries that discourage many beginners.
         </p>
-        
         <p>
           Start by learning to hold your knife correctly. The pinch grip—thumb and forefinger pinching the blade just above the handle, remaining fingers wrapped around the handle—provides maximum control. Your non-dominant hand forms a "claw" shape, fingertips tucked under and knuckles guiding the blade, protecting your fingertips while cutting.
         </p>
-        
         <p>
           Master a few essential cutting patterns rather than attempting to memorize dozens of specialized techniques. The cross-cut (straight up and down) handles most basic slicing. The rock chop (keeping the tip of the knife on the board while rocking the blade) efficiently minces herbs and garlic. The bias cut (slicing at an angle) creates more surface area for vegetables that will be quickly cooked.
         </p>
-        
         <p>
           Practice consistent sizing for even cooking. Ingredients cut to similar dimensions cook at the same rate, preventing the frustrating mix of overcooked and undercooked elements in the same dish. This uniformity matters particularly for stir-fries, roasted vegetables, and soups.
         </p>
@@ -228,23 +106,18 @@
 
       <section>
         <h2>Understanding Heat: The Heart of Cooking</h2>
-        
         <p>
           Heat transforms raw ingredients into meals, yet many cooking struggles stem from misunderstanding this fundamental force. Learning to control and manipulate heat—rather than simply turning burners on and off—marks the transition from following recipes to truly cooking with confidence.
         </p>
-        
         <p>
           Recognize the difference between high and low heat applications. High heat (searing, stir-frying, boiling) creates flavorful browning and quick cooking, ideal for tender cuts of meat, many vegetables, and pasta. Low heat (simmering, braising, roasting) develops flavor over time and tenderizes tougher ingredients through slow transformation.
         </p>
-        
         <p>
           Learn to "read" visual and auditory cues rather than relying solely on timers. The sizzle when ingredients hit the pan, the changing color of meat as it cooks, the gentle bubbling of a proper simmer—these sensory indicators provide more reliable guidance than precise timing, which varies based on ingredients, equipment, and conditions.
         </p>
-        
         <p>
           Master temperature management for consistent results. Preheat pans properly before adding ingredients to prevent sticking and ensure proper browning. Allow refrigerated meats to warm slightly before cooking for more even results. Rest cooked proteins to allow heat redistribution before cutting, which preserves juiciness.
         </p>
-        
         <blockquote>
           Understanding heat is like learning a language that ingredients speak. Once you recognize the signals they send during cooking, you'll know exactly when to adjust temperature, when to remove food from heat, and how to achieve the results you want.
         </blockquote>
@@ -252,23 +125,18 @@
 
       <section>
         <h2>Essential Cooking Methods Everyone Should Know</h2>
-        
         <p>
           Rather than memorizing dozens of recipes, focus on mastering versatile cooking methods that can be applied to countless ingredients. This approach builds adaptability and confidence while reducing reliance on step-by-step instructions for every meal.
         </p>
-        
         <p>
           Sautéing provides perhaps the most essential stovetop technique—cooking food quickly in a small amount of fat over moderate to high heat. Master the basics of heating your pan properly before adding oil, arranging ingredients in a single layer for proper browning, and resisting the urge to constantly stir. This method handles everything from vegetables and proteins to creating the flavorful base for sauces and soups.
         </p>
-        
         <p>
           Roasting offers the simplest path to flavor transformation in the oven. Learning to properly season ingredients, arrange them for even cooking, and recognize perfect caramelization turns simple vegetables, chicken, and other proteins into meals with minimal active preparation. The hands-off nature of roasting makes it particularly valuable for busy schedules.
         </p>
-        
         <p>
           Braising combines initial browning with gentle, moist cooking—transforming tough cuts of meat and hearty vegetables into tender, flavorful dishes. This technique creates depth through initial searing, then uses time and gentle heat to develop rich, complex flavors as ingredients simmer in liquid. Though it requires patience, braising typically demands minimal active attention while cooking.
         </p>
-        
         <p>
           Simple pasta preparation deserves special mention for its versatility and approachability. Learning to properly salt pasta water, cook noodles to al dente texture, and reserve starchy cooking water for creating silky sauces provides the foundation for countless quick, satisfying meals from minimal ingredients.
         </p>
@@ -276,23 +144,18 @@
 
       <section>
         <h2>The Art of Seasoning</h2>
-        
         <p>
           Perhaps no aspect of cooking creates more uncertainty among beginners than seasoning. The fear of over-salting or adding too much spice causes many to under-season, resulting in bland food that reinforces the misconception that home cooking lacks flavor compared to restaurant meals.
         </p>
-        
         <p>
           Understand salt as a flavor enhancer rather than merely a "salty" addition. Proper salting doesn't make food taste salty—it amplifies the natural flavors already present in ingredients. Learning to season in layers throughout cooking, rather than only at the end, develops deeper flavor. Start with a modest amount, taste frequently, and adjust gradually.
         </p>
-        
         <p>
           Explore acid as the often-missing element in home cooking. Lemon juice, vinegar, wine, or even a splash of pickle brine can transform a flat-tasting dish by adding brightness and balance. When something tastes "almost right" but seems to lack depth, acid often provides the missing dimension, especially in rich dishes.
         </p>
-        
         <p>
           Build a personal herb and spice vocabulary gradually. Rather than purchasing dozens of unfamiliar options, start with versatile basics like black pepper, garlic powder, paprika, and dried herbs such as oregano and thyme. As you grow more comfortable, expand based on cuisines that interest you. Fresh herbs added at the end of cooking provide vibrant flavor that their dried counterparts cannot match.
         </p>
-        
         <p>
           Develop the habit of tasting throughout the cooking process. Professional chefs constantly evaluate and adjust seasoning, and this practice alone will dramatically improve your results. When possible, season and taste ingredients individually before combining them, which helps you understand how flavors develop and interact.
         </p>
@@ -300,71 +163,56 @@
 
       <section>
         <h2>Meal Planning and Preparation</h2>
-        
         <p>
           Cooking skills deliver their full benefit when supported by thoughtful planning and preparation. Even modest advance organization transforms cooking from a daily burden into a manageable and enjoyable part of your routine.
         </p>
-        
         <p>
           Start with realistic expectations based on your schedule and energy levels. Perhaps you cook fully from scratch on less busy days while relying on partially prepared ingredients or simpler techniques when time is limited. This flexible approach prevents the all-or-nothing thinking that often leads to abandoning home cooking entirely during busy periods.
         </p>
-        
         <p>
           Learn the art of strategic leftovers—intentionally preparing extra portions of versatile components that can be repurposed throughout the week. Roasted vegetables become salad toppings or frittata fillings. Extra protein transforms into sandwiches, grain bowls, or quick pasta dishes. This approach minimizes daily cooking time while still providing fresh-tasting meals.
         </p>
-        
         <p>
           Build a personal collection of "foundation recipes"—simple, adaptable preparations that work with whatever ingredients you have available. A basic frittata accommodates nearly any vegetable combination. A simple stir-fry template works with countless protein and vegetable pairings. A versatile vinaigrette brightens salads, roasted vegetables, or simple proteins.
         </p>
-        
         <blockquote>
-          The most sustainable approach to cooking isn't about elaborate meal planning systems or marathon prep sessions. It's about finding the level of organization that supports your lifestyle while making healthier, more economical meals consistently achievable.
+          The most sustainable approach to cooking isn’t about elaborate meal planning systems or marathon prep sessions. It’s about finding the level of organization that supports your lifestyle while making healthier, more economical meals consistently achievable.
         </blockquote>
       </section>
 
       <section>
         <h2>Learning from Mistakes: The Path to Mastery</h2>
-        
         <p>
-          Perhaps the most important cooking skill isn't a technique at all, but rather the mindset that views mistakes as valuable learning opportunities rather than discouraging failures. Every experienced cook has burned, oversalted, undercooked, and otherwise imperfectly prepared countless dishes on their journey to competence.
+          Perhaps the most important cooking skill isn’t a technique at all, but rather the mindset that views mistakes as valuable learning opportunities rather than discouraging failures. Every experienced cook has burned, oversalted, undercooked, and otherwise imperfectly prepared countless dishes on their journey to competence.
         </p>
-        
         <p>
           Develop troubleshooting abilities by understanding what went wrong. Was the heat too high? Did you rush a process that needed time? Was seasoning imbalanced? This analytical approach transforms disappointments into knowledge that prevents similar issues in the future.
         </p>
-        
         <p>
           Keep cooking simple while building confidence. Complex recipes with numerous simultaneous components create more opportunities for errors and frustration. Focus instead on perfecting basic techniques through repetition, gradually adding complexity as your skills develop naturally.
         </p>
-        
         <p>
           Document your experiences, either mentally or in a simple cooking journal. Noting adjustments that improved recipes, techniques that worked particularly well, or combinations that surprised you creates a personalized knowledge base more valuable than any cookbook.
         </p>
-        
         <p>
-          Remember that "perfect" is the enemy of "good enough." Many beginning cooks become discouraged when comparing their efforts to professionally styled food photography or restaurant presentations. Focus instead on creating nutritious, flavorful meals that satisfy you and those you cook for, regardless of their appearance.
+          Remember that “perfect” is the enemy of “good enough.” Many beginning cooks become discouraged when comparing their efforts to professionally styled food photography or restaurant presentations. Focus instead on creating nutritious, flavorful meals that satisfy you and those you cook for, regardless of their appearance.
         </p>
       </section>
 
       <section>
         <h2>Beyond Basics: Growing Your Skills</h2>
-        
         <p>
           Once you've established fundamental cooking abilities, continuing development becomes a lifelong journey of exploration rather than an intimidating challenge. Each new technique or ingredient builds upon your existing foundation, gradually expanding your culinary repertoire.
         </p>
-        
         <p>
           Consider exploring a specific cuisine that interests you. Whether drawn to Italian simplicity, Mexican vibrancy, Japanese precision, or any other tradition, focusing on one culinary style allows you to build cohesive knowledge rather than scattered techniques. Most cuisines share core ingredients and methods that, once mastered, support numerous dishes.
         </p>
-        
         <p>
           Invest in your knife skills as they mature. The ability to break down a whole chicken, fillet a fish, or efficiently process vegetables not only saves money but opens new culinary possibilities. These more advanced cutting techniques build naturally from the basic skills you've already developed.
         </p>
-        
         <p>
           Explore improvisation as your confidence grows. Try creating meals without recipes, using your understanding of flavor combinations and cooking methods to guide you. This approach develops creativity while reinforcing your knowledge of how ingredients behave and interact.
         </p>
-        
         <p>
           Remember that cooking remains a fundamentally practical skill, regardless of how advanced your abilities become. Even professional chefs value efficiency, simplicity, and nourishment in their home cooking. The goal isn't culinary showmanship but the ability to feed yourself and others well, with increasing joy and decreasing stress.
         </p>
@@ -372,19 +220,15 @@
 
       <section>
         <h2>Conclusion: Cooking as a Lifelong Skill</h2>
-        
         <p>
           The journey toward kitchen confidence follows a satisfying progression: what begins as a necessary life skill gradually becomes a creative outlet, a meditative practice, and eventually, a means of connecting with others through shared nourishment.
         </p>
-        
         <p>
           As your abilities develop, you'll likely find that cooking provides benefits beyond the practical. Many discover that preparing food offers a unique form of mindfulness—an opportunity to engage fully with tangible processes in an increasingly digital world. The sensory nature of cooking—the aromas, textures, sounds, and flavors—grounds us in physical reality in uniquely satisfying ways.
         </p>
-        
         <p>
           The confidence you develop in the kitchen often extends to other areas of life. Mastering techniques that once seemed intimidating, recovering from mistakes creatively, and developing intuition through practice builds a growth mindset that supports learning in all domains.
         </p>
-        
         <p>
           Perhaps most meaningfully, cooking provides a direct connection to human traditions spanning cultures and generations. When you prepare food with intention and care, you participate in one of humanity's most fundamental shared experiences—the transformation of ingredients into nourishment that sustains both body and spirit.
         </p>
@@ -393,15 +237,23 @@
       <!-- Author Bio -->
       <div class="article-author">
         <h3>By Life 101</h3>
-        <p>Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.</p>
+        <p>
+          Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.
+        </p>
       </div>
-
     </article>
-  </div>
-</body>
-<script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer layout-wrapper">
+    <p></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/navbar.js"></script>
+  <script>
+    document.querySelector('footer p').textContent =
+      `© ${new Date().getFullYear()} Life 101. All rights reserved.`;
   </script>
+</body>
 </html>

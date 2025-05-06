@@ -1,183 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Money Matters: Budgeting, Saving & Planning | Life 101</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="img/Favicon.png">
-  <style>
-    
-    body.article-page {
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .layout-wrapper {
-      border: 1px solid #E3E3E3;
-      border-radius: 8px;
-      padding: 40px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__title {
-      text-align: center;
-      width: 100%;
-      color: #22282B;
-      font-size: 49.1px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-transform: capitalize;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__desc {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #22282B;
-      font-size: 12.27px;
-      font-weight: 500;
-      line-height: 18px;
-      opacity: 0.85;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content {
-      margin-top: 30px;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content h2 {
-      font-size: 24px;
-      margin: 30px 0 20px;
-      color: #22282B;
-      font-weight: 600;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content p {
-      margin-bottom: 20px;
-      line-height: 1.6;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content blockquote {
-      border-left: 3px solid #01761B;
-      padding-left: 20px;
-      margin: 30px 0;
-      font-style: italic;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author {
-      margin-top: 40px;
-      padding: 20px;
-      background: #FAFAFA;
-      border-radius: 8px;
-      border: 1px solid #E3E3E3;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author h3 {
-      margin: 0 0 10px 0;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    /* Media queries for article page */
-    .article-content img {
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 8px;
-      margin: 20px auto;
-      display: block;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    @media (max-width: 480px) {
-      .article-page .layout-wrapper {
-        padding: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-      
-      .article-content h2 {
-        font-size: 20px;
-      }
-      
-      .article-content p, 
-      .article-content blockquote {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
+  <title>Money Matters: Budgeting, Saving &amp; Planning — Life 101</title>
+  <meta name="description" content="Foundational advice on managing your money, avoiding common pitfalls, and building strong financial habits.">
 
-<body class="blogpage article-page">
-  <!-- NAVBAR (for blogposts/*.html pages) -->
-  <div class="navbar">
+  <!-- Favicon -->
+  <link rel="icon" href="../img/Favicon.png">
+
+  <!-- Google Font: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="article-page">
+  <!-- Header / Navbar -->
+  <header class="navbar">
     <div class="navbar__wrapper">
-      <div class="navbar__logo">
-        <img src="../img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
-      </div>
-      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
-      <div class="navbar__menu" id="mobileMenu">
-        <nav class="navbar__center">
-          <a href="../index.html">Home</a>
-          <a href="../about.html">About</a>
-          <a href="../topics.html">Topics</a>
-          <a href="../resources.html">Resources</a>
-          <a href="../blog.html">Blog</a>
-        </nav>
-        <div class="navbar__auth">
-          <a href="../signin.html">Sign In</a>
-          <a href="../signup.html" class="navbar__signup"><span>Register Today!</span></a>
-        </div>
-      </div>
+      <a href="../index.html" class="navbar__logo">
+        <img src="../img/green-logo.png" alt="Life 101 Logo">
+      </a>
+      <button class="navbar__burger" aria-label="Toggle navigation">☰</button>
+      <nav class="navbar__menu">
+        <a href="../index.html" class="navbar__link">Home</a>
+        <a href="../about.html" class="navbar__link">About</a>
+        <a href="../topics.html" class="navbar__link">Topics</a>
+        <a href="../resources.html" class="navbar__link">Resources</a>
+        <a href="../blog.html" class="navbar__link">Blog</a>
+        <a href="../signin.html" class="navbar__link navbar__signin">Sign In</a>
+        <a href="../signup.html" class="btn btn--primary navbar__signup">
+          <span>Register Today!</span>
+        </a>
+      </nav>
     </div>
-  </div>
-  
-  <div class="layout-wrapper">
-    <h1 class="hero__title">Money Matters: Budgeting, Saving & Planning</h1>
-    <p class="hero__desc">Foundational advice on managing your money, avoiding common pitfalls, and building strong financial habits.</p>
-    
+  </header>
+
+  <!-- Main Article -->
+  <main id="main-content" class="layout-wrapper article-page__wrapper">
+    <h1 class="hero__title">Money Matters: Budgeting, Saving &amp; Planning</h1>
+    <p class="hero__desc">
+      Foundational advice on managing your money, avoiding common pitfalls, and building strong financial habits.
+    </p>
+
     <article class="article-content">
-      <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*60sgHcCpW-KxaK6m0vuGrA.png" alt="Financial planning and budgeting concept">
+      <img
+        src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*60sgHcCpW-KxaK6m0vuGrA.png"
+        alt="Financial planning and budgeting concept"
+      >
 
       <section>
         <h2>The Reality of Financial Independence</h2>
-        
         <p>
           Money—few topics generate as much stress, confusion, and avoidance among young adults. Yet financial literacy is perhaps the most critical life skill that's rarely taught comprehensively in traditional education. As you step into adulthood, understanding how to manage your money effectively becomes not just important but essential to your overall wellbeing and future possibilities.
         </p>
-        
         <p>
           The truth is that financial independence doesn't simply arrive with your first paycheck. Instead, it's built through intentional habits, informed decisions, and strategic planning. Whether you're earning minimum wage, managing student loans, or navigating your first salaried position, how you handle your money today will shape your options tomorrow.
         </p>
-        
         <p>
           Many of us have an uncomfortable relationship with money discussions. Perhaps it wasn't talked about openly in your household, or maybe you've adopted limiting beliefs about your ability to manage finances effectively. The good news is that financial literacy is a learnable skill—not an innate talent that some have and others don't.
         </p>
-        
         <p>
           In this guide, we'll break down the foundational elements of personal finance—budgeting, saving, and planning—in straightforward terms. These aren't just abstract concepts but practical tools that can transform your relationship with money and expand your future possibilities. Let's begin with the cornerstone of financial wellness: creating and maintaining a budget that actually works.
         </p>
@@ -185,29 +77,25 @@
 
       <section>
         <h2>Budgeting: Your Financial Foundation</h2>
-        
         <p>
           At its core, a budget is simply a plan for your money. Think of it as a roadmap rather than a restriction—a way to ensure your limited resources are aligned with what matters most to you. Without a budget, money tends to slip through our fingers, and we're left wondering where it all went at the end of the month.
         </p>
-        
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*AuUki6AygL056PGP" alt="Budget planning and financial organization">
-        
+        <img
+          src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*AuUki6AygL056PGP"
+          alt="Budget planning and financial organization"
+        >
         <p>
-          The first step in creating a functional budget is understanding your current financial reality. Begin by tracking all income sources and expenses for at least one month. This baseline awareness is crucial—you can't change what you don't measure. Use a spreadsheet, a budgeting app, or even a simple notebook to record every dollar that comes in and goes out.
+          The first step in creating a functional budget is understanding your current financial reality. Begin by tracking all income sources and expenses for at least one month. This baseline awareness is crucial—you can't change what you don't measure.
         </p>
-        
         <p>
           Once you have this data, categorize your expenses into needs, wants, and savings/debt payments. A popular framework is the 50/30/20 rule, which suggests allocating 50% of your income to essential needs (housing, food, transportation, utilities), 30% to wants (entertainment, dining out, hobbies), and 20% to savings and debt repayment. While these percentages may not work for everyone—particularly those in high-cost areas or with significant debt—they provide a useful starting point.
         </p>
-        
         <blockquote>
           A budget isn't about deprivation—it's about intentionality. When you decide in advance how your money will be used, you take control of your financial story rather than letting circumstances dictate it.
         </blockquote>
-        
         <p>
           Several budgeting methods have proven effective for different personality types and financial situations. The zero-based budget ensures every dollar has a designated purpose until your income minus expenses equals zero. The envelope system (physical or digital) allocates specific amounts to different spending categories, helping prevent overspending. The "pay yourself first" approach prioritizes savings before addressing discretionary spending.
         </p>
-        
         <p>
           Whichever method you choose, the key is consistency and regular review. Set aside time each week to check your progress and make adjustments as needed. Remember that your first budget will rarely be perfect—it's an evolving tool that becomes more refined as you gain experience and your financial situation changes.
         </p>
@@ -215,23 +103,18 @@
 
       <section>
         <h2>Mastering the Art of Saving</h2>
-        
         <p>
           Saving money is more than just a good habit—it's the bridge between your present circumstances and future goals. Yet for many, particularly those early in their careers or managing tight budgets, consistent saving feels impossible. The truth is that successful saving isn't about the amount but the consistency and intention behind it.
         </p>
-        
         <p>
           Start with an emergency fund—the financial buffer that prevents life's inevitable surprises from derailing your progress. Aim for three to six months of essential expenses, but begin with a more manageable target like $1,000. This fund should be accessible but not too easily spent—consider a high-yield savings account separate from your regular checking.
         </p>
-        
         <p>
           The power of compound interest makes time your greatest ally in building wealth. Even small amounts invested regularly can grow significantly over decades. This principle applies whether you're contributing to a retirement account, saving for a home down payment, or building a general investment portfolio.
         </p>
-        
         <p>
           Automate your savings whenever possible. Set up direct deposits or automatic transfers that move money to your savings accounts before you have a chance to spend it. This "out of sight, out of mind" approach removes the psychological barrier of having to actively choose saving over immediate gratification.
         </p>
-        
         <p>
           When increasing your savings rate seems challenging, focus on finding small, sustainable changes rather than dramatic cutbacks that you'll eventually abandon. Review subscriptions you rarely use, negotiate bills where possible, and be mindful of recurring expenses that provide minimal value relative to their cost.
         </p>
@@ -239,27 +122,21 @@
 
       <section>
         <h2>Debt Management: The Path to Financial Freedom</h2>
-        
         <p>
           Not all debt is created equal. Strategic debt—like a mortgage for a home that will likely appreciate, or student loans that increase your earning potential—can be tools for building wealth. However, high-interest consumer debt, particularly credit card balances, creates a significant barrier to financial progress.
         </p>
-        
         <p>
           If you're carrying multiple debts, develop a systematic approach to paying them down. The avalanche method prioritizes high-interest debt first, saving you money over time. The snowball method tackles smallest balances first, providing psychological wins that maintain motivation. Both strategies work—choose the one that aligns with your financial situation and personality.
         </p>
-        
         <p>
           While managing existing debt, it's crucial to avoid accumulating more. This often requires addressing the root causes of overspending, which might include insufficient income, lack of emergency savings, or using credit to maintain a lifestyle beyond your means. Building awareness around these patterns is the first step toward changing them.
         </p>
-        
         <p>
           Credit cards, when used responsibly, can be valuable tools for building credit history and even earning rewards. The key is to treat credit purchases as if they were debit transactions—only charge what you can pay in full when the statement arrives. This approach allows you to leverage the benefits of credit cards without falling into the high-interest debt trap.
         </p>
-        
         <blockquote>
           Freedom from debt isn't just about improving your financial statements—it's about reducing stress, expanding possibilities, and regaining control over your financial future.
         </blockquote>
-        
         <p>
           If your debt feels overwhelming, remember that you're not alone, and resources are available. Nonprofit credit counseling services can provide personalized guidance, while income-driven repayment plans may offer relief for federal student loans. The important thing is to take action rather than avoiding the reality of your situation.
         </p>
@@ -267,23 +144,18 @@
 
       <section>
         <h2>Strategic Financial Planning</h2>
-        
         <p>
           Financial planning extends beyond day-to-day money management to align your resources with your long-term goals and values. While the specifics vary based on individual circumstances and priorities, effective planning generally includes several key elements.
         </p>
-        
         <p>
           Retirement planning, even when it seems decades away, should begin as early as possible. If your employer offers a 401(k) match, contribute at least enough to capture this "free money." As your income grows, aim to increase your retirement contributions until you're saving at least 15% of your income for the future.
         </p>
-        
         <p>
           Insurance—health, auto, renters/homeowners, and eventually life and disability—forms a crucial part of your financial safety net. Rather than seeing insurance as an unnecessary expense, view it as protection for the financial foundation you're building. The right coverage prevents a single accident or illness from destroying years of careful planning.
         </p>
-        
         <p>
           Estate planning isn't just for the wealthy or elderly. Basic elements like a will, healthcare directive, and designated beneficiaries ensure your wishes are honored and your assets protected. These documents become increasingly important as you acquire property, start a family, or build significant savings.
         </p>
-        
         <p>
           Tax planning, often overlooked by young adults, can significantly impact your financial progress. Understanding tax-advantaged accounts (401(k)s, IRAs, HSAs), available deductions, and the implications of different income sources helps you keep more of what you earn and invest more effectively for the future.
         </p>
@@ -291,23 +163,18 @@
 
       <section>
         <h2>Navigating Major Financial Decisions</h2>
-        
         <p>
           Throughout your adult life, you'll face several major financial decisions that can either accelerate your progress or create lasting setbacks. Approaching these thoughtfully is essential to long-term financial health.
         </p>
-        
         <p>
           Housing often represents your largest expense. When deciding whether to rent or buy, consider not just the monthly payment but also the full costs of ownership, your expected time in the location, and the opportunity cost of funds used for a down payment. The conventional wisdom that buying is always better than renting ignores many of these factors and may not hold true in your specific situation.
         </p>
-        
         <p>
           Transportation choices significantly impact both your finances and lifestyle. A car that costs more than half your annual income will likely become a financial burden, regardless of how manageable the monthly payment seems. Consider total ownership costs including insurance, maintenance, fuel, and depreciation when making vehicle decisions.
         </p>
-        
         <p>
           Education and career investments, from college degrees to professional certifications, should be evaluated based on expected return rather than abstract value. This doesn't mean reducing education to a purely financial calculation, but it does mean being realistic about how much debt is reasonable relative to likely career outcomes.
         </p>
-        
         <p>
           Major life events—weddings, children, relocations—carry both emotional significance and financial implications. Creating specific savings funds for these occasions allows you to honor their importance without compromising your overall financial stability.
         </p>
@@ -315,23 +182,18 @@
 
       <section>
         <h2>Building Financial Resilience</h2>
-        
         <p>
           Financial resilience—the ability to withstand setbacks and adapt to changing circumstances—is perhaps the most valuable outcome of sound money management. This resilience isn't about wealth accumulation alone but about creating systems that can bend without breaking when life throws inevitable curveballs.
         </p>
-        
         <p>
           Income diversity reduces your vulnerability to job loss or industry downturns. This might include developing multiple skills, creating passive income streams through investments, or building a side business that could potentially grow into your primary income source.
         </p>
-        
         <p>
           Continuous learning keeps your financial knowledge current in a rapidly changing economy. Follow reputable financial publications, consider working with a certified financial planner for personalized guidance, and regularly reassess whether your strategies still align with evolving goals and market conditions.
         </p>
-        
         <p>
           Community resources can strengthen your financial position beyond what individual effort alone can achieve. This might include formal arrangements like insurance risk pools or informal systems like skill exchanges and shared resources within your social network.
         </p>
-        
         <p>
           Finally, maintain perspective about money's role in your life. Financial security is a means to living according to your values, not an end in itself. As you build habits that support your economic wellbeing, remember that the ultimate goal is a life that feels meaningful and fulfilling by your own definition.
         </p>
@@ -339,23 +201,18 @@
 
       <section>
         <h2>Conclusion: The Journey to Financial Wellness</h2>
-        
         <p>
           Financial management isn't a destination but a lifelong journey—one that evolves as your circumstances, goals, and the broader economic environment change. The principles we've explored—budgeting intentionally, saving consistently, managing debt strategically, and planning thoughtfully—provide a foundation that can adapt to whatever life brings your way.
         </p>
-        
         <p>
           Remember that progress, not perfection, is the goal. You'll make mistakes along the way—we all do. The difference between those who achieve financial wellness and those who struggle isn't the absence of errors but the willingness to learn from them and adjust course accordingly.
         </p>
-        
         <p>
           Start where you are, with what you have. If tracking every expense seems overwhelming, begin with just one spending category. If saving 20% of your income isn't currently possible, start with 1% and increase gradually. Small, consistent actions compound over time, just like interest in a well-managed investment account.
         </p>
-        
         <p>
           Financial education is a gift to your future self. Each concept you understand, each habit you develop, and each intentional decision you make creates more options and greater security for the person you're becoming. This knowledge isn't just about money—it's about creating the freedom to live authentically and pursue what matters most to you.
         </p>
-        
         <p>
           As you continue your financial journey, maintain curiosity and compassion—both for yourself and others. Money behaviors are deeply influenced by family history, social context, and personal psychology. Understanding these connections can help you make choices aligned with your authentic values rather than unconscious patterns or external pressures.
         </p>
@@ -364,15 +221,24 @@
       <!-- Author Bio -->
       <div class="article-author">
         <h3>By Life 101</h3>
-        <p>Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.</p>
+        <p>
+          Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.
+        </p>
       </div>
-
     </article>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer layout-wrapper">
+    <p></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/navbar.js"></script>
   <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
+    // Auto-inject current year into footer
+    document.querySelector('footer p').textContent =
+      `© ${new Date().getFullYear()} Life 101. All rights reserved.`;
   </script>
 </body>
 </html>

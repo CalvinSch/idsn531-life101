@@ -1,98 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Life 101</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.0">
-  <link rel="icon" type="image/png" href="img/Favicon.png">
-
+  <meta name="description" content="Life 101: Latest blog articles on real-world adulting">
+  <link rel="icon" href="img/Favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <title>Blog — Life 101</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body class="blogpage">
-
-  <!-- NAVBAR (consistent on all pages) -->
-  <div class="navbar">
+<body>
+  <!-- Header from base.html -->
+  <header class="navbar">
     <div class="navbar__wrapper">
-      <div class="navbar__logo">
-        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
-      </div>
-      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
-      <div class="navbar__menu" id="mobileMenu">
-        <nav class="navbar__center">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="topics.html">Topics</a>
-          <a href="resources.html">Resources</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-        <div class="navbar__auth">
-          <a href="signin.html">Sign In</a>
-          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+      <a href="index.html" class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;">
+      </a>
+      <button class="navbar__burger" aria-label="Toggle navigation">☰</button>
+      <nav class="navbar__menu">
+        <a href="index.html"       class="navbar__link">Home</a>
+        <a href="about.html"       class="navbar__link">About</a>
+        <a href="topics.html"      class="navbar__link">Topics</a>
+        <a href="resources.html"   class="navbar__link">Resources</a>
+        <a href="blog.html"        class="navbar__link">Blog</a>
+        <a href="signin.html"      class="navbar__link navbar__signin">Sign In</a>
+        <a href="signup.html"      class="btn btn--primary navbar__signup">
+          <span>Register Today!</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="layout-wrapper">
+    <section class="blog-section">
+      <h1 class="hero__title">Latest Articles</h1>
+      <p class="hero__desc">
+        Learn, grow, and thrive with real-world insights—from money and food to home fixes and everyday life skills.
+      </p>
+
+      <div class="blog-grid">
+        <!-- 1 -->
+        <div class="card blog-card">
+          <img src="img/socialskills.png" alt="Adulthood: A Growing Journey">
+          <h3>Adulthood: A Growing Journey</h3>
+          <p>Explore the challenges and lessons that come with entering adulthood, in this personal essay.</p>
+          <em>By Life 101</em>
+          <a href="blogposts/adulthood.html" class="btn btn--primary blog-card__btn">
+            Read More
+          </a>
+        </div>
+
+        <!-- 2 -->
+        <div class="card blog-card">
+          <img src="img/home-maintenance.png" alt="Leaving the Nest">
+          <h3>Leaving the Nest: Independent Living</h3>
+          <p>Practical advice for young adults getting ready to step into life on their own.</p>
+          <em>By Life 101</em>
+          <a href="blogposts/leavingthenest.html" class="btn btn--primary blog-card__btn">
+            Read More
+          </a>
+        </div>
+
+        <!-- 3 -->
+        <div class="card blog-card">
+          <img src="img/communication-skills.png" alt="Career Readiness">
+          <h3>Career Readiness: Resumes &amp; Etiquette</h3>
+          <p>Tips on crafting your resume, interviewing, and professional behavior.</p>
+          <em>By Life 101</em>
+          <a href="blogposts/careerreadiness.html" class="btn btn--primary blog-card__btn">
+            Read More
+          </a>
+        </div>
+
+        <!-- 4 -->
+        <div class="card blog-card">
+          <img src="img/cookingnutrition.png" alt="Kitchen Confidence">
+          <h3>Kitchen Confidence: Essential Cooking Skills</h3>
+          <p>Fundamental techniques to transform you into a confident home chef.</p>
+          <em>By Life 101</em>
+          <a href="blogposts/cooking.html" class="btn btn--primary blog-card__btn">
+            Read More
+          </a>
+        </div>
+
+        <!-- Hidden until “Load More” -->
+        <div class="card blog-card">
+          <img src="img/changing-lightbulb.png" alt="Home Maintenance">
+          <h3>Domestic Superpowers: Home Skills</h3>
+          <p>Fix leaky faucets, decode laundry symbols, and more.</p>
+          <em>By Life 101</em>
+          <a href="blogposts/homemaintenance.html" class="btn btn--primary blog-card__btn">
+            Read More
+          </a>
+        </div>
+
+        <div class="card blog-card">
+          <img src="img/moneybudgeting.png" alt="Money Matters">
+          <h3>Money Matters: Budgeting, Saving &amp; Planning</h3>
+          <p>Foundational advice on managing your money and avoiding common pitfalls.</p>
+          <em>By Life 101</em>
+          <a href="blogposts/moneymatters.html" class="btn btn--primary blog-card__btn">
+            Read More
+          </a>
+        </div>
+
+        <div class="card blog-card">
+          <img src="img/running.png" alt="Self-Care Isn’t Selfish">
+          <h3>Self-Care Isn’t Selfish: Building Your Wellness Routine</h3>
+          <p>Practical strategies for sustainable physical and mental self-care.</p>
+          <em>By Life 101</em>
+          <a href="blogposts/selfcare.html" class="btn btn--primary blog-card__btn">
+            Read More
+          </a>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="layout-wrapper">
-    <h1 class="hero__title">Latest Articles</h1>
-    <p class="hero__desc">Learn, grow, and thrive with real-world insights—from money and food to home fixes and
-      everyday life skills.</p>
-    <div class="blog-grid">
-
-      <div class="blog-card">
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*54X7Mpj0aJchJUnGPmFu1A@2x.jpeg"
-          alt="Featured Blog">
-        <h3>Adulthood: A Growing Journey</h3>
-        <p>Explore the challenges and lessons that come with entering adulthood, in this honest and personal essay.</p>
-        <em>By Life 101</em>
-        <a href="https://medium.com/@muskan220501/adulthood-d81956b7f0b6" target="_blank">Read Article</a>
+      <div class="load-more" style="text-align:center; margin-top: var(--sp-lg);">
+        <a href="#" class="btn">Load More</a>
       </div>
+    </section>
+  </main>
 
-      <div class="blog-card">
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*AuUki6AygL056PGP" alt="Blog 2">
-        <h3>Leaving the Nest: Preparing for Independent Living</h3>
-        <p>Practical advice for young adults getting ready to step into life on their own—from routines to
-          responsibilities.</p>
-        <em>By Life 101</em>
-        <a href="https://medium.com/@selfhelpchampion4/leaving-the-nest-preparing-for-independent-living-adulting-101-day-2-of-26-665b7aa0aa94"
-          target="_blank">Read Article</a>
-      </div>
+  <!-- Footer from base.html -->
+  <footer class="site-footer layout-wrapper">
+    <p></p>
+  </footer>
 
-      <div class="blog-card">
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*dXKVgE-srw709GtqMgk78g.jpeg" alt="Blog 3">
-        <h3>Career Readiness: Resumes & Professional Etiquette</h3>
-        <p>Get prepped for your career with tips on resume building, interviews, and navigating the workplace.</p>
-        <em>By Life 101</em>
-        <a href="https://medium.com/@selfhelpchampion4/career-readiness-resumes-interviews-and-professional-etiquette-adulting-101-day-6-of-25-a5a16d97772c"
-          target="_blank">Read Article</a>
-      </div>
-
-      <div class="blog-card">
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*60sgHcCpW-KxaK6m0vuGrA.png" alt="Blog 4">
-        <h3>Money Matters: Budgeting, Saving & Planning</h3>
-        <p>Foundational advice on managing your money, avoiding common pitfalls, and building strong financial habits.
-        </p>
-        <em>By Life 101</em>
-        <a href="https://medium.com/@selfhelpchampion4/money-matters-budgeting-saving-and-financial-planning-adulting-101-day-3-of-26-17f6e18b3907"
-          target="_blank">Read Article</a>
-      </div>
-
-    </div>
-
-    <div class="load-more">
-      <a href="#" class="cta"><span class="cta__text">Load More</span></a>
-    </div>
-  </div>
-
+  <!-- Nav toggle -->
+  <script src="js/navbar.js"></script>
+  <!-- Inject year -->
   <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
+    document.querySelector('footer p').textContent =
+      `© ${new Date().getFullYear()} Life 101. All rights reserved.`;
   </script>
+  <!-- Load More logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards       = Array.from(document.querySelectorAll('.blog-card'));
+      const loadMoreBtn = document.querySelector('.load-more .btn');
 
+      // hide all beyond the first 4
+      cards.slice(4).forEach(c => c.classList.add('hidden'));
+
+      loadMoreBtn.addEventListener('click', e => {
+        e.preventDefault();
+        cards.forEach(c => c.classList.remove('hidden'));
+        loadMoreBtn.parentElement.style.display = 'none';
+      });
+    });
+  </script>
 </body>
-
 </html>

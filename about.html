@@ -1,130 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Life 101</title>
+  <meta name="description" content="Life 101: Meet the team behind the practical guides for adulthood">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.0">
-  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <!-- Favicon -->
+  <link rel="icon" href="img/Favicon.png">
 
+  <!-- Google Font: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <title>About — Life 101</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body class="aboutpage">
-
-  <!-- NAVBAR (consistent on all pages) -->
-  <div class="navbar">
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
     <div class="navbar__wrapper">
-      <div class="navbar__logo">
-        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
-      </div>
-      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
-      <div class="navbar__menu" id="mobileMenu">
-        <nav class="navbar__center">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="topics.html">Topics</a>
-          <a href="resources.html">Resources</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-        <div class="navbar__auth">
-          <a href="signin.html">Sign In</a>
-          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
-        </div>
-      </div>
+      <a href="index.html" class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;">
+      </a>
+      <button class="navbar__burger" aria-label="Toggle navigation">☰</button>
+      <nav class="navbar__menu">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="topics.html" class="navbar__link">Topics</a>
+        <a href="resources.html" class="navbar__link">Resources</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="signin.html" class="navbar__link navbar__signin">Sign In</a>
+        <a href="signup.html" class="btn btn--primary navbar__signup">
+          <span>Register Today!</span>
+        </a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- ✅ CENTERED WRAPPER -->
-  <div class="layout-wrapper">
-
-
-
-    <!-- ✅ CONTENT -->
+  <!-- Main Content -->
+  <main id="main-content" class="layout-wrapper">
     <section class="team-section">
-      <h1 class="hero__title">Meet the Team</h1>
-      <div class="team-grid">
+      <h1 class="section__title">Meet the Team</h1>
+      <div class="grid grid--cards">
 
-        <div class="team-card">
+        <div class="card team-card">
           <img src="http://iyawebdev.com/idsn531/20251/ascolani.jpg" alt="Max Ascolani">
-          <div class="stats__number">Max Ascolani</div>
-          <div class="stats__label">Max Ascolani is an entrepreneur with experience building AI-powered tools and
-            user-centric web platforms. With a background in consulting and account management at Amazon and early-stage
-            startups, he brings a sharp focus on lean execution, aesthetic design, and technical clarity.</div>
-          <ul>
+          <h3>Max Ascolani</h3>
+          <p>Max is an entrepreneur with experience building AI-powered tools and user-centric web platforms. With a background in consulting and account management, he brings a sharp focus on lean execution, aesthetic design, and technical clarity.</p>
+          <ul class="team-card__skills">
             <li>Ideation</li>
             <li>HTML</li>
           </ul>
         </div>
 
-        <div class="team-card">
+        <div class="card team-card">
           <img src="http://iyawebdev.com/idsn531/20251/jhulce.jpg" alt="Jake Hulce">
-          <div class="stats__number">Jake Hulce</div>
-          <div class="stats__label">Jake Hulce is a project manager and creative builder with a passion for technology,
-            storytelling, and real-world problem solving. With a background in supply chain operations and a master’s in
-            Integrated Design, Business, and Technology from USC, he combines strategy with heart. From startups to
-            Fortune 500s, Jake thrives on leading cross-functional teams, empowering others, and turning complex ideas
-            into impactful experiences.</div>
-          <ul>
+          <h3>Jake Hulce</h3>
+          <p>Jake is a project manager and creative builder passionate about technology, storytelling, and problem solving. With a background in supply chain operations and a master’s in Integrated Design, he combines strategy with heart.</p>
+          <ul class="team-card__skills">
             <li>PM</li>
             <li>HTML</li>
           </ul>
         </div>
 
-        <div class="team-card">
+        <div class="card team-card">
           <img src="http://iyawebdev.com/idsn531/20251/cschaul.jpg" alt="Calvin Schaul">
-          <div class="stats__number">Calvin Schaul</div>
-          <div class="stats__label">
-            Calvin Schaul is an engineer, animator, and developer with a passion for creating well-designed experiences
-            that help and inspire others. He
-            has a background in feature film at Disney and DreamWorks and is currently a Creative Technologist at
-            Duolingo. His
-            undergraduate education is in Computer Engineering and he is pursuing a Masters in Integrated Design,
-            Business, and
-            Technology at USC.
-          </div>
-          <ul>
+          <h3>Calvin Schaul</h3>
+          <p>Calvin is an engineer, animator, and developer who creates well-designed experiences to help and inspire. With a background in feature film at Disney and DreamWorks, he now works as a Creative Technologist at Duolingo.</p>
+          <ul class="team-card__skills">
             <li>HTML</li>
             <li>JS</li>
           </ul>
         </div>
 
-        <div class="team-card">
+        <div class="card team-card">
           <img src="http://iyawebdev.com/idsn531/20251/ikeating.jpg" alt="Isabella Keating">
-          <div class="stats__number">Isabella Keating</div>
-          <div class="stats__label">Isabella Keating is a marketing strategist with experience leading digital-first
-            campaigns for global brands like Google and Goldman Sachs. With a passion for user experience and emerging
-            technology, she brings a strategic lens to web development—connecting data-driven insights with compelling
-            design and content.</div>
-          <ul>
+          <h3>Isabella Keating</h3>
+          <p>Isabella is a marketing strategist with experience leading digital campaigns for global brands. She connects data-driven insights with compelling design and content, bringing a strategic lens to web development.</p>
+          <ul class="team-card__skills">
             <li>PM</li>
             <li>HTML</li>
           </ul>
         </div>
 
-        <div class="team-card">
+        <div class="card team-card">
           <img src="http://iyawebdev.com/idsn531/20251/pemcnama.jpg" alt="Paige McNamara-Pittler">
-          <div class="stats__number">Paige McNamara-Pittler</div>
-          <div class="stats__label">Paige McNamara-Pittler is an experienced developer and financial expert with
-            expertise in bringing innovative technical solutions to fast-paced, critical business funcitons.
-            Paige has extensive experience across the financial industry while also honing her design skills through a
-            Masters in Integrated Design, Business, and Technology at USC. She is passionate about using technology to
-            solve real-world problems and make a positive impact.</div>
+          <h3>Paige McNamara-Pittler</h3>
+          <p>Paige is an experienced developer and financial expert who brings innovative technical solutions to critical business functions. She has extensive industry experience and a background in design and technology.</p>
+          <ul class="team-card__skills">
+            <li>Development</li>
+            <li>Finance</li>
+          </ul>
         </div>
+
       </div>
+    </section>
+  </main>
 
-  </div>
-  </section>
-  </div>
+  <!-- Footer -->
+  <footer class="site-footer layout-wrapper">
+    <p></p>
+  </footer>
 
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
   <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
+    // Inject the current year into the footer
+    document.querySelector('footer p').textContent =
+      `© ${new Date().getFullYear()} Life 101. All rights reserved.`;
   </script>
 </body>
-
 </html>

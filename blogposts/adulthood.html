@@ -1,183 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adulthood: A Growing Journey | Life 101</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="img/Favicon.png">
-  <style>
-    
-    body.article-page {
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .layout-wrapper {
-      border: 1px solid #E3E3E3;
-      border-radius: 8px;
-      padding: 40px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__title {
-      text-align: center;
-      width: 100%;
-      color: #22282B;
-      font-size: 49.1px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-transform: capitalize;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-page .hero__desc {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #22282B;
-      font-size: 12.27px;
-      font-weight: 500;
-      line-height: 18px;
-      opacity: 0.85;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content {
-      margin-top: 30px;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content h2 {
-      font-size: 24px;
-      margin: 30px 0 20px;
-      color: #22282B;
-      font-weight: 600;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content p {
-      margin-bottom: 20px;
-      line-height: 1.6;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-content blockquote {
-      border-left: 3px solid #01761B;
-      padding-left: 20px;
-      margin: 30px 0;
-      font-style: italic;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author {
-      margin-top: 40px;
-      padding: 20px;
-      background: #FAFAFA;
-      border-radius: 8px;
-      border: 1px solid #E3E3E3;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author h3 {
-      margin: 0 0 10px 0;
-      font-size: 16px;
-      color: #22282B;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    .article-author p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555;
-      font-family: 'Manrope', sans-serif;
-    }
-    
-    /* Media queries for article page */
-    .article-content img {
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 8px;
-      margin: 20px auto;
-      display: block;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    @media (max-width: 480px) {
-      .article-page .layout-wrapper {
-        padding: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-      
-      .article-content h2 {
-        font-size: 20px;
-      }
-      
-      .article-content p, 
-      .article-content blockquote {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
+  <meta name="description" content="Adulthood: A Growing Journey — explore the challenges and lessons of entering adulthood.">
+  <title>Adulthood: A Growing Journey — Life 101</title>
 
-<body class="blogpage article-page">
-  <!-- NAVBAR (consistent on all pages) -->
-  <div class="navbar">
+  <!-- Favicon -->
+  <link rel="icon" href="../img/Favicon.png">
+
+  <!-- Google Font: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="article-page">
+  <!-- Header / Navbar -->
+  <header class="navbar">
     <div class="navbar__wrapper">
-      <div class="navbar__logo">
-        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
-      </div>
-      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
-      <div class="navbar__menu" id="mobileMenu">
-        <nav class="navbar__center">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="topics.html">Topics</a>
-          <a href="resources.html">Resources</a>
-          <a href="blog.html">Blog</a>
-        </nav>
-        <div class="navbar__auth">
-          <a href="signin.html">Sign In</a>
-          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
-        </div>
-      </div>
+      <a href="../index.html" class="navbar__logo">
+        <img src="../img/green-logo.png" alt="Life 101 Logo">
+      </a>
+      <button class="navbar__burger" aria-label="Toggle navigation">☰</button>
+      <nav class="navbar__menu">
+        <a href="../index.html" class="navbar__link">Home</a>
+        <a href="../about.html" class="navbar__link">About</a>
+        <a href="../topics.html" class="navbar__link">Topics</a>
+        <a href="../resources.html" class="navbar__link">Resources</a>
+        <a href="../blog.html" class="navbar__link">Blog</a>
+        <a href="../signin.html" class="navbar__link navbar__signin">Sign In</a>
+        <a href="../signup.html" class="btn btn--primary navbar__signup">
+          <span>Register Today!</span>
+        </a>
+      </nav>
     </div>
-  </div>
-  
-  <div class="layout-wrapper">
+  </header>
+
+  <!-- Main Article -->
+  <main id="main-content" class="layout-wrapper article-page__wrapper">
     <h1 class="hero__title">Adulthood: A Growing Journey</h1>
-    <p class="hero__desc">Explore the challenges and lessons that come with entering adulthood, in this honest and personal essay.</p>
-    
+    <p class="hero__desc">
+      Explore the challenges and lessons that come with entering adulthood, in this honest and personal essay.
+    </p>
+
     <article class="article-content">
-      <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*54X7Mpj0aJchJUnGPmFu1A@2x.jpeg" alt="Young adult contemplating life choices">
+      <img
+        src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*54X7Mpj0aJchJUnGPmFu1A@2x.jpeg"
+        alt="Young adult contemplating life choices"
+      >
 
       <section>
         <h2>The Unexpected Reality of Independence</h2>
-        
         <p>
           There's something almost magical about the way we imagine adulthood when we're young. Freedom, independence, making our own rules — it all sounds like a dream come true. And then one day, you're standing in your first apartment, surrounded by boxes and the sudden weight of responsibility, wondering why nobody told you how complicated "freedom" actually is.
         </p>
-        
         <p>
           My own journey into adulthood began with a mix of excitement and anxiety. The day after college graduation, I moved to a new city for my first "real" job. I had prepared for this moment — or so I thought. I had lined up an apartment, secured employment, and even created a budget spreadsheet that I was convinced would keep my finances in perfect order.
         </p>
-        
         <p>
           But what I hadn't prepared for was the profound sense of solitude that came with true independence. There was no roommate to chat with after a long day, no dining hall serving meals, no structured schedule guiding my days. Just me, making every decision, from what to eat for dinner to how to spend my weekends.
         </p>
-        
         <p>
           This freedom — the very thing I had longed for — was both exhilarating and terrifying. I could stay up until 3 AM watching movies if I wanted to, but I also had to deal with the consequences of sleep deprivation the next day. No one was there to suggest that maybe, just maybe, I should go to bed.
         </p>
@@ -185,21 +74,19 @@
 
       <section>
         <h2>Financial Realities: More Than Just Budgeting</h2>
-        
         <p>
           Perhaps the most jarring aspect of adulthood is the financial responsibility that comes with it. My carefully crafted budget spreadsheet didn't account for unexpected expenses — the car maintenance, the medical bills, the friend's wedding gift. It didn't prepare me for the emotional relationship with money that I would develop.
         </p>
-        
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*60sgHcCpW-KxaK6m0vuGrA.png" alt="Financial planning">
-        
+        <img
+          src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*60sgHcCpW-KxaK6m0vuGrA.png"
+          alt="Financial planning"
+        >
         <p>
           I remember my first major financial setback: an unexpected car repair that cost nearly a month's rent. As I handed over my credit card, feeling my heart sink with each digit of the total, I realized that adulthood isn't just about making enough money — it's about managing the inevitable financial surprises that life throws your way.
         </p>
-        
         <p>
           What I've learned since then is that financial security in adulthood isn't just about having enough money; it's about building resilience. It's about creating safety nets — emergency funds, insurance policies, supportive networks — that catch you when those surprises happen. Because they will happen, again and again, throughout your adult life.
         </p>
-        
         <blockquote>
           Adulthood isn't about avoiding financial challenges — it's about developing the tools to face them without being crushed by their weight.
         </blockquote>
@@ -207,21 +94,19 @@
 
       <section>
         <h2>The Shifting Landscape of Relationships</h2>
-        
         <p>
           Another profound shift in adulthood comes in how we form and maintain relationships. The built-in social structure of school disappears, replaced by the need to actively seek out and nurture connections. This takes effort, intentionality, and often a willingness to step outside your comfort zone.
         </p>
-        
         <p>
           Making friends as an adult isn't as simple as sitting next to someone in class. It requires vulnerability — reaching out, suggesting coffee, following up. It means accepting that some connections will fade despite your best efforts, and others will strengthen in ways you never anticipated.
         </p>
-        
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*dXKVgE-srw709GtqMgk78g.jpeg" alt="Professional relationships">
-        
+        <img
+          src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*dXKVgE-srw709GtqMgk78g.jpeg"
+          alt="Professional relationships"
+        >
         <p>
           I've found that adult friendships require a different kind of tending than those of my youth. They require understanding when someone can't make plans because of work commitments or family obligations. They require celebrating the big milestones — promotions, marriages, babies — while also showing up for the ordinary moments and the difficult ones.
         </p>
-        
         <p>
           Family relationships transform too. The dynamic with parents shifts as you become more of an equal, sometimes even reversing roles as they age. Siblings become more than just the people you grew up with — they become friends, confidants, and partners in navigating family dynamics.
         </p>
@@ -229,19 +114,15 @@
 
       <section>
         <h2>Professional Growth: More Than a Career Ladder</h2>
-        
         <p>
           When I entered the workforce, I had a clear vision of my professional trajectory. I would work hard, climb the ladder, and achieve success as defined by titles and salary increases. What I didn't anticipate was how my definition of success would evolve as I grew as a person.
         </p>
-        
         <p>
           Professional growth in adulthood isn't linear. It's filled with unexpected turns, lateral moves, and sometimes complete pivots. I've watched friends leave high-paying corporate jobs to start their own businesses, seen colleagues step back from promising careers to focus on family, and witnessed others reinvent themselves entirely in new industries.
         </p>
-        
         <p>
           The most valuable professional lesson I've learned is that your career is just one aspect of your identity — not the entirety of it. Finding work that aligns with your values and allows space for the other parts of your life that matter is far more fulfilling than chasing external markers of success alone.
         </p>
-        
         <p>
           That said, adulthood also brings the reality of needing to support yourself financially. Finding the balance between pursuing work that fulfills you and ensuring your material needs are met is an ongoing negotiation, not a one-time decision.
         </p>
@@ -249,19 +130,15 @@
 
       <section>
         <h2>Self-Discovery: The Ongoing Journey</h2>
-        
         <p>
           Perhaps the most surprising aspect of adulthood is discovering that you don't suddenly know who you are when you turn 18, or 21, or 30. Self-discovery is a lifelong process, one that deepens and evolves as you gather more experiences.
         </p>
-        
         <p>
           In my early twenties, I was certain about my preferences, opinions, and goals. Now, approaching my thirties, I'm more comfortable with ambiguity. I've learned that changing your mind isn't a sign of weakness but of growth. That your interests, values, and even personality can shift over time, and that's not just okay — it's part of being fully human.
         </p>
-        
         <p>
           Adulthood has taught me to hold space for contradictions within myself. I can be both fiercely independent and deeply crave connection. I can love my career and still feel burnout. I can be confident in my abilities and still experience impostor syndrome. These aren't failures of self-knowledge but reflections of the complex, multifaceted nature of identity.
         </p>
-        
         <blockquote>
           The journey of adulthood isn't about arriving at a fixed destination of self-understanding, but about continuing to explore and evolve as you grow.
         </blockquote>
@@ -269,19 +146,15 @@
 
       <section>
         <h2>Embracing the Unknown</h2>
-        
         <p>
           If there's one truth I've come to embrace about adulthood, it's that certainty is an illusion. No matter how carefully you plan or how diligently you prepare, life will surprise you. Jobs will be lost, relationships will end, unexpected opportunities will arise, and global events will reshape your reality in ways you never anticipated.
         </p>
-        
         <p>
           The past few years have taught us all this lesson in profound ways. From the pandemic to economic shifts to technological advancements, we've all had to adapt to rapid change. Those who cling too tightly to certainty often struggle the most, while those who cultivate flexibility find ways to not just survive but thrive amid uncertainty.
         </p>
-        
         <p>
           This doesn't mean living without plans or goals. Rather, it means holding those plans loosely, being willing to adapt them as circumstances change and new information emerges. It means developing resilience — the ability to bounce back from setbacks, learn from failures, and continue moving forward even when the path isn't clear.
         </p>
-        
         <p>
           In embracing uncertainty, I've found a paradoxical sense of peace. When you stop expecting life to follow a prescribed path, you open yourself to possibilities you might never have imagined. You become more present, more appreciative of the moment you're in rather than anxiously awaiting some future state of "arrival."
         </p>
@@ -289,36 +162,40 @@
 
       <section>
         <h2>Conclusion: The Continuous Becoming</h2>
-        
         <p>
-          Adulthood isn't a destination but a continuous process of becoming. There is no arrival point where you suddenly have everything figured out, where the challenges cease and certainty reigns. Instead, there is growth, adaptation, and the ongoing integration of new experiences into your evolving sense of self.
+          Adulthood isn't a destination but a continuous process of becoming. There is no arrival point where you suddenly have everything figured out, where the challenges cease and certainty reigns. Instead, there is growth, adaptation, and the ongoing integration of new experiences into your evolving sense of self.  
         </p>
-        
         <p>
           The beauty of this journey lies in its open-endedness. Each challenge overcome, each connection deepened, each moment of self-discovery adds texture and meaning to your life. The struggles of adulthood — the financial pressures, the relationship complexities, the professional uncertainties — are not mere obstacles to happiness but the very experiences through which a rich and meaningful life is crafted.
         </p>
-        
         <p>
           So if you're at the beginning of your adult journey, feeling overwhelmed by responsibility or uncertain about the path ahead, know this: you don't have to have it all figured out. None of us do, not really. We're all making it up as we go, learning and growing and sometimes stumbling along the way.
         </p>
-        
         <p>
           And that, perhaps, is the greatest freedom adulthood offers — not the absence of constraints but the opportunity to define for yourself what a life well-lived looks like, and to continually refine that definition as you grow. It's a journey without end, filled with challenges and joys, disappointments and triumphs, all woven together into the rich tapestry of a fully lived adult life.
         </p>
       </section>
 
-      <!-- Author Bio -->
       <div class="article-author">
         <h3>By Life 101</h3>
-        <p>Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.</p>
+        <p>
+          Life 101 is dedicated to helping young adults navigate the challenges of modern life. We provide practical guidance, actionable advice, and supportive insights to empower your journey through adulthood.
+        </p>
       </div>
-
     </article>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer layout-wrapper">
+    <p></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/navbar.js"></script>
   <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("show");
-    }
+    // Update year in footer
+    document.querySelector('footer p').textContent =
+      `© ${new Date().getFullYear()} Life 101. All rights reserved.`;
   </script>
 </body>
 </html>

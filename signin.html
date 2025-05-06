@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Create your Life 101 account to unlock practical guides for adulthood."/>
-  <title>Sign Up — Life 101</title>
+  <meta name="description" content="Sign in to your Life 101 account and continue your journey through real-world adulting guides."/>
+  <title>Sign In — Life 101</title>
 
   <!-- Favicon -->
   <link rel="icon" href="img/Favicon.png"/>
@@ -21,7 +21,7 @@
   <!-- Global CSS -->
   <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="signup-page">
+<body class="signin-page">
   <!-- Navbar -->
   <header class="navbar">
     <div class="navbar__wrapper">
@@ -43,19 +43,11 @@
     </div>
   </header>
 
-  <!-- Sign-Up Form -->
+  <!-- Sign-In Form -->
   <main>
     <div class="form-container">
-      <h1>Create Your Account</h1>
+      <h1>Welcome Back</h1>
       <form action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input
-            type="text" id="name" name="name"
-            placeholder="Your Name"
-            required
-          />
-        </div>
         <div class="form-group">
           <label for="email">Email Address</label>
           <input
@@ -68,27 +60,18 @@
           <label for="password">Password</label>
           <input
             type="password" id="password" name="password"
-            placeholder="Create a password"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input
-            type="password" id="confirm-password"
-            name="confirm-password"
-            placeholder="Confirm your password"
+            placeholder="Your password"
             required
           />
         </div>
         <button type="submit" class="btn btn--primary btn--block">
-          Sign Up
+          Sign In
         </button>
       </form>
 
       <p class="form-footer">
-        Already have an account?
-        <a href="signin.html">Sign In</a>
+        Don’t have an account?
+        <a href="signup.html">Register Today!</a>
       </p>
     </div>
   </main>
