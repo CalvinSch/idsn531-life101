@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money & Budgeting | Life 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    .topic-content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .topic-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container img {
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .topic-content {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #22282B;
+    }
+    
+    .topic-content p {
+      margin-bottom: 20px;
+    }
+    
+    .key-themes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 50px 0;
+    }
+    
+    .theme-card {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .theme-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .theme-icon {
+      font-size: 36px;
+      color: #01761B;
+      margin-bottom: 16px;
+    }
+    
+    .theme-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #22282B;
+    }
+    
+    .theme-description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #22282B;
+      opacity: 0.9;
+    }
+    
+    .topic-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      background-color: #4CAF50; 
+    }
+    
+    .topic-cta {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+    
+    .topic-cta h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    .topic-cta p {
+      font-size: 16px;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #01761B;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #025014;
+    }
+    
+    @media (max-width: 768px) {
+      .key-themes {
+        grid-template-columns: 1fr;
+      }
+      
+      .topic-image-container img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body class="topicspage">
+  <!-- NAVBAR (consistent on all pages) -->
+  <div class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
+      </div>
+      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
+      <div class="navbar__menu" id="mobileMenu">
+        <nav class="navbar__center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="resources.html">Resources</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="navbar__auth">
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout-wrapper">
+    <div class="topic-content-wrapper">
+      <div class="topic-header">
+        <h1 class="hero__title" style="text-align: center;">💰 Money & Budgeting</h1>
+        <p class="hero__desc">
+          Managing your financial life — from tracking expenses and building savings to understanding credit and planning for the future.
+        </p>
+      </div>
+      
+      <div class="topic-image-container">
+        <img src="moneybudgeting.png" alt="Money & Budgeting" />
+      </div>
+      
+      <div class="topic-content">
+        <p>Remember when your biggest financial decision was how to spend your allowance? Then suddenly you're facing student loan payments, rent deposits, health insurance premiums, and the realization that groceries cost how much? That moment of "wait, I need to figure out where all my money is going?" hits hard when financial responsibilities pile up.</p>
+        
+        <p>The transition to managing your own finances comes with a steeper learning curve than most expect. Things that seemed straightforward—paying bills on time, saving for goals, understanding taxes—become complex puzzles when you're balancing limited income against seemingly unlimited expenses. And unlike many academic subjects, financial literacy is rarely taught comprehensively, leaving most young adults to piece together knowledge through trial and error—often with costly mistakes along the way.</p>
+      </div>
+      
+      <div class="key-themes">
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3 class="theme-title">Budgeting Basics</h3>
+          <p class="theme-description">Creating a workable spending plan—tracking income and expenses, prioritizing needs versus wants, and finding sustainable ways to live within your means while still enjoying life.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3 class="theme-title">Credit & Debt Management</h3>
+          <p class="theme-description">Understanding how credit works and its impact on your financial future—from building a credit history and managing student loans to avoiding debt traps and using credit strategically.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-piggy-bank"></i>
+          </div>
+          <h3 class="theme-title">Saving & Investing</h3>
+          <p class="theme-description">Building financial security beyond the paycheck-to-paycheck cycle—establishing emergency funds, saving for goals, and taking first steps toward long-term wealth building through investing.</p>
+        </div>
+      </div>
+      
+      <div class="topic-content">
+        <p>One of the most unsettling aspects of adulting is discovering how much financial knowledge is assumed rather than taught. There's a particular anxiety that comes with realizing you're making consequential money decisions without feeling fully prepared—whether it's negotiating your first salary, deciding how much to contribute to a retirement account, or figuring out if you can actually afford that apartment. The financial systems we're expected to navigate often seem designed by experts for experts, not for newcomers just trying to avoid financial mistakes.</p>
+        
+        <p>The good news is that each financial challenge you overcome adds to your growing money confidence. That feeling of accomplishment when you stick to a budget for the first time, pay off a debt, or build your first emergency fund creates momentum that makes future financial decisions less intimidating. While the learning curve is steep, developing the judgment to make thoughtful money choices aligned with your values and goals is a core adulting skill that pays dividends throughout your life. With each small victory, your financial anxiety diminishes and your sense of control over your future grows.</p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

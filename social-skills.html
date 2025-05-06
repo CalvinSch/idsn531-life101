@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Skills | Life 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    .topic-content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .topic-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container img {
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .topic-content {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #22282B;
+    }
+    
+    .topic-content p {
+      margin-bottom: 20px;
+    }
+    
+    .key-themes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 50px 0;
+    }
+    
+    .theme-card {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .theme-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .theme-icon {
+      font-size: 36px;
+      color: #01761B;
+      margin-bottom: 16px;
+    }
+    
+    .theme-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #22282B;
+    }
+    
+    .theme-description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #22282B;
+      opacity: 0.9;
+    }
+    
+    .topic-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      background-color: #4CAF50; 
+    }
+    
+    .topic-cta {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+    
+    .topic-cta h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    .topic-cta p {
+      font-size: 16px;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #01761B;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #025014;
+    }
+    
+    @media (max-width: 768px) {
+      .key-themes {
+        grid-template-columns: 1fr;
+      }
+      
+      .topic-image-container img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body class="topicspage">
+  <!-- NAVBAR (consistent on all pages) -->
+  <div class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
+      </div>
+      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
+      <div class="navbar__menu" id="mobileMenu">
+        <nav class="navbar__center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="resources.html">Resources</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="navbar__auth">
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout-wrapper">
+    <div class="topic-content-wrapper">
+      <div class="topic-header">
+        <h1 class="hero__title" style="text-align: center;">👋 Social Skills</h1>
+        <p class="hero__desc">
+          Essential skills for building meaningful connections — conversation, boundary-setting, and navigating professional relationships.
+        </p>
+      </div>
+      
+      <div class="topic-image-container">
+        <img src="socialskills.png" alt="Social Skills" />
+      </div>
+      
+      <div class="topic-content">
+        <p>Remember when making friends meant simply sitting next to someone at lunch or joining the same after-school club? Then suddenly you're in the adult world, at a networking event or new workplace, realizing that social connections no longer form automatically. That moment of "wait, I need to actively build and maintain relationships?" hits hard when you find yourself in a new city or situation without your established social network.</p>
+        
+        <p>The transition to adult social life comes with a steep learning curve and sometimes embarrassing knowledge gaps. Things that once seemed to happen naturally—finding people with common interests, maintaining friendships despite busy schedules, or navigating complex workplace dynamics—suddenly require intentional effort. And unlike technical skills, there's no formal class on how to politely exit a conversation or what to do when a friendship starts to fade.</p>
+      </div>
+      
+      <div class="key-themes">
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="theme-title">Conversation Confidence</h3>
+          <p class="theme-description">The journey from awkward small talk to meaningful connections—learning to actively listen, ask thoughtful questions, and navigate the unwritten rules of different social contexts.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3 class="theme-title">Boundary Setting</h3>
+          <p class="theme-description">Discovering the delicate balance of giving and taking in relationships—learning to communicate your needs clearly while respecting others' limits, an essential skill for healthy adult connections.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="theme-title">Professional Relationships</h3>
+          <p class="theme-description">Navigating the complex social territory of work life—understanding the distinction between colleagues and friends, managing conflicts professionally, and building a network that supports your career.</p>
+        </div>
+      </div>
+      
+      <div class="topic-content">
+        <p>One of the strangest parts of adulting is realizing how much social skill development happens indirectly—or doesn't. Some of us had natural environments that taught us how to navigate social situations. Others find themselves Googling "how to make friends as an adult" or "networking tips that don't feel fake," wondering why these vital skills weren't explicitly taught. There's often a sense of impostor syndrome around social interactions, as if everyone else innately knows how to build and maintain meaningful connections.</p>
+        
+        <p>The good news is that each social challenge you overcome builds a library of interpersonal wisdom that makes future interactions less intimidating. That sense of accomplishment when you successfully build a new friendship, smoothly handle a difficult conversation, or expand your professional network is uniquely satisfying. While some social situations will always feel challenging, developing the ability to connect authentically with others is perhaps the most rewarding adulting skill. With each small victory in your social world, your confidence grows and relationships transform from a source of anxiety into a wellspring of support and fulfillment.</p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work & Productivity | Life 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    .topic-content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .topic-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container img {
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .topic-content {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #22282B;
+    }
+    
+    .topic-content p {
+      margin-bottom: 20px;
+    }
+    
+    .key-themes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 50px 0;
+    }
+    
+    .theme-card {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .theme-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .theme-icon {
+      font-size: 36px;
+      color: #01761B;
+      margin-bottom: 16px;
+    }
+    
+    .theme-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #22282B;
+    }
+    
+    .theme-description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #22282B;
+      opacity: 0.9;
+    }
+    
+    .topic-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      background-color: #4CAF50; 
+    }
+    
+    .topic-cta {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+    
+    .topic-cta h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    .topic-cta p {
+      font-size: 16px;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #01761B;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #025014;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .key-themes {
+        grid-template-columns: 1fr;
+      }
+      
+      .topic-image-container img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body class="topicspage">
+  <!-- NAVBAR (consistent on all pages) -->
+  <div class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
+      </div>
+      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
+      <div class="navbar__menu" id="mobileMenu">
+        <nav class="navbar__center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="resources.html">Resources</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="navbar__auth">
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout-wrapper">
+    <div class="topic-content-wrapper">
+      <div class="topic-header">
+        <h1 class="hero__title" style="text-align: center;">💼 Work & Productivity</h1>
+        <p class="hero__desc">
+          Time management, building routines, workplace etiquette, and professional growth tips.
+        </p>
+      </div>
+      
+      <div class="topic-image-container">
+        <img src="workproductivity.png" alt="Work & Productivity" />
+      </div>
+      
+      <div class="topic-content">
+        <p>The transition from student to working adult hits many of us like a truck. Suddenly, no one is setting deadlines for you, checking if you showed up, or giving you a structured schedule. The freedom can feel amazing—until you realize you have no idea how to manage your time without external structure. That pile of laundry, those unanswered emails, and your dwindling bank account are all waiting for you to figure it out.</p>
+        
+        <p>Unlike school, where procrastination might mean a late night before a deadline, adult productivity challenges have real consequences: missed bill payments, professional reputation damage, or constantly living in a state of chaos. The truth is, most of us weren't taught how to manage our adult lives efficiently, and the learning curve can be steep and sometimes embarrassing.</p>
+      </div>
+      
+      <div class="key-themes">
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="theme-title">Self-Management</h3>
+          <p class="theme-description">The jarring transition from external structure to self-motivation—developing your own systems for getting things done when no one is checking your work or setting your deadlines anymore.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3 class="theme-title">Life-Work Balance</h3>
+          <p class="theme-description">Navigating the reality that adult responsibilities don't end at 5pm—finding sustainable routines that balance career demands with personal care, relationships, and home management.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3 class="theme-title">Workplace Navigation</h3>
+          <p class="theme-description">Decoding the unwritten rules of professional environments—from figuring out office politics to understanding when to ask questions vs. when to figure things out yourself.</p>
+        </div>
+      </div>
+      
+      <div class="topic-content">
+        <p>One of the hardest adulting lessons is realizing that perfect productivity doesn't exist. Those Instagram influencers with color-coded planners and 5am workout routines aren't showing the full picture. Real adult productivity is messy, inconsistent, and deeply personal. Finding your own rhythm often means embracing this messiness rather than fighting it—learning which productivity hacks actually work for your brain and lifestyle, not someone else's idealized version.</p>
+        
+        <p>The good news? Those productivity wins feel incredibly empowering. The first time you successfully juggle a full workweek while keeping your apartment reasonably clean, preparing actual meals, maintaining relationships, AND getting enough sleep feels like a genuine adulting achievement. These skills develop gradually through trial and error. Each small system you create—whether it's a bill-paying routine or a meal prep habit—adds up to a more manageable adult life. You never "solve" productivity completely, but you do get better at it with practice.</p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

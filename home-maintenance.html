@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home & Maintenance | Life 101</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    .topic-content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .topic-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .topic-image-container img {
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .topic-content {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #22282B;
+    }
+    
+    .topic-content p {
+      margin-bottom: 20px;
+    }
+    
+    .key-themes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 50px 0;
+    }
+    
+    .theme-card {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .theme-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .theme-icon {
+      font-size: 36px;
+      color: #01761B;
+      margin-bottom: 16px;
+    }
+    
+    .theme-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #22282B;
+    }
+    
+    .theme-description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #22282B;
+      opacity: 0.9;
+    }
+    
+    .topic-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      background-color: #4CAF50; 
+    }
+    
+    .topic-cta {
+      background: #FAFAFA;
+      border: 1px solid #E3E3E3;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+    
+    .topic-cta h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    .topic-cta p {
+      font-size: 16px;
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #01761B;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #025014;
+    }
+    
+    @media (max-width: 768px) {
+      .key-themes {
+        grid-template-columns: 1fr;
+      }
+      
+      .topic-image-container img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body class="topicspage">
+  <!-- NAVBAR (consistent on all pages) -->
+  <div class="navbar">
+    <div class="navbar__wrapper">
+      <div class="navbar__logo">
+        <img src="img/green-logo.png" alt="Life 101 Logo" style="height: 34px;" />
+      </div>
+      <div class="navbar__burger" onclick="toggleMenu()">☰</div>
+      <div class="navbar__menu" id="mobileMenu">
+        <nav class="navbar__center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="resources.html">Resources</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="navbar__auth">
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html" class="navbar__signup"><span>Register Today!</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout-wrapper">
+    <div class="topic-content-wrapper">
+      <div class="topic-header">
+        <h1 class="hero__title" style="text-align: center;">🏠 Home & Maintenance</h1>
+        <p class="hero__desc">
+          Essential skills for living independently — cleaning, laundry, repairs, and renter tips.
+        </p>
+      </div>
+      
+      <div class="topic-image-container">
+        <img src="home-maintenance.png" alt="Home & Maintenance" />
+      </div>
+      
+      <div class="topic-content">
+        <p>Remember when a mysterious noise in your home meant yelling "Mom!" or "Dad!" and someone else would handle it? Then suddenly you're living on your own, staring at a leaky faucet at midnight, or realizing you've never actually unclogged a drain before. That moment of "wait, I'm the adult now?" hits hard when home maintenance issues arise.</p>
+        
+        <p>The transition to maintaining your own living space comes with a steep learning curve and sometimes embarrassing knowledge gaps. Things your parents seemed to handle effortlessly—keeping a clean bathroom, knowing which cleaning products to use on different surfaces, or figuring out why the internet stopped working—suddenly become your responsibility. And unlike school subjects, there's no formal class on how to handle a sink full of standing water or what to do when your toilet won't stop running.</p>
+      </div>
+      
+      <div class="key-themes">
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-broom"></i>
+          </div>
+          <h3 class="theme-title">Cleaning Reality</h3>
+          <p class="theme-description">The shocking realization that clean spaces don't just happen—developing your own cleaning routines and standards when no one else is setting or maintaining them for you.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="theme-title">Fix-It Confidence</h3>
+          <p class="theme-description">Building the courage to tackle basic repairs yourself—that first successful DIY fix marks a true adulting milestone, saving money and building confidence in your ability to handle problems.</p>
+        </div>
+        
+        <div class="theme-card">
+          <div class="theme-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3 class="theme-title">Renter Challenges</h3>
+          <p class="theme-description">Navigating the sometimes murky waters of rental living—knowing when to call your landlord versus handling issues yourself, and advocating for your rights without burning bridges.</p>
+        </div>
+      </div>
+      
+      <div class="topic-content">
+        <p>One of the strangest parts of adulting is realizing how much maintenance knowledge you picked up indirectly—or didn't. Some of us watched our parents fix things and absorbed those skills through osmosis. Others find themselves Googling "how to use a plunger properly" at 2 AM, wondering why this wasn't covered in school. There's often a sense of impostor syndrome around home maintenance, as if everyone else innately knows how to handle a circuit breaker or remove mildew.</p>
+        
+        <p>The good news is that each maintenance challenge you overcome builds a library of adulting knowledge that makes the next issue less intimidating. That surge of pride when you successfully hang a curtain rod or unclog a drain without calling for help is uniquely satisfying. While some home issues will always require professional assistance, developing the judgment to know what you can handle yourself versus when to call for help is itself an important adulting skill. With each small victory, your confidence grows and your living space becomes more truly your own.</p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
