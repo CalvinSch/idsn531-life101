@@ -201,35 +201,22 @@ img {
     background-color: var(--color-primary-dark);
 }
 
-/* -----------------
-   Sections & Typography
--------------------*/
-h1, .hero__title {
-    font-size: var(--fs-xxl);
-    margin-bottom: var(--sp-lg);
-    text-align: center;
-}
-
-h2, .section__title {
-    font-size: var(--fs-xl);
-    margin: var(--sp-lg) 0 var(--sp-md);
-    text-align: center;
-}
-
-p, .hero__desc {
-    font-size: var(--fs-sm);
-    color: var(--color-text-light);
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto var(--sp-lg);
-}
-
 /* Homepage Hero Section */
 .homepage__hero {
     text-align: center; /* Centers all child elements (including the button) */
-    padding: var(--sp-xl) 0;
+    padding: var(--sp-xl) 0; /* You can reduce this value to make the section more compact */
 }
 
+/* Title and description */
+.hero__title {
+    margin-bottom: var(--sp-md); /* Reduced space between the title and description */
+}
+
+.hero__desc {
+    margin-bottom: var(--sp-sm); /* Reduced space between description and button */
+}
+
+/* Button styling */
 .hero__btn {
     display: inline-block;
     padding: var(--sp-sm) var(--sp-md);
@@ -238,7 +225,7 @@ p, .hero__desc {
     font-size: var(--fs-md);
     text-transform: uppercase;
     border-radius: 50px;  /* Makes the button rounded */
-    margin-top: var(--sp-lg);
+    margin-top: var(--sp-sm);  /* Adjusted to bring the button closer */
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
