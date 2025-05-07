@@ -81,11 +81,14 @@
 
 <!-- Topics Grid -->
 <script>
-  function scrollTopics(direction) {
-    const container = document.getElementById('topicsContainer');
-    const scrollAmount = 300;
-    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-  }
+function scrollTopics(direction) {
+  const container = document.getElementById('topicsScroll');
+  const scrollAmount = container.offsetWidth / 3; // scroll by one card
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
 </script>
 
 <!-- Topics Grid -->
@@ -116,13 +119,13 @@
         <a href="signup.html" class="btn btn--primary">Get Fit</a>
       </div>
       <div class="card topic-card">
-        <img src="img/jobskills.png" alt="Job Skills">
+        <img src="img/jobinterview.jpg" alt="Job Skills">
         <h3>Job Skills</h3>
         <p>Gain essential skills for landing and keeping a job.</p>
         <a href="signup.html" class="btn btn--primary">Skill Up</a>
       </div>
       <div class="card topic-card">
-        <img src="img/mealprep.png" alt="Meal Prep">
+        <img src="img/mealprep.jpg" alt="Meal Prep">
         <h3>Meal Prep</h3>
         <p>Cook nutritious meals efficiently and affordably.</p>
         <a href="signup.html" class="btn btn--primary">Start Cooking</a>
