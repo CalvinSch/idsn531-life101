@@ -224,6 +224,30 @@ p, .hero__desc {
     margin: 0 auto var(--sp-lg);
 }
 
+/* Homepage Hero Section */
+.homepage__hero {
+    text-align: center; /* Centers all child elements (including the button) */
+    padding: var(--sp-xl) 0;
+}
+
+.hero__btn {
+    display: inline-block;
+    padding: var(--sp-sm) var(--sp-md);
+    background-color: var(--color-primary);
+    color: white;
+    font-size: var(--fs-md);
+    text-transform: uppercase;
+    border-radius: 50px;  /* Makes the button rounded */
+    margin-top: var(--sp-lg);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero__btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+
 /* =========================
    Homepage Stats Section
 ========================== */
