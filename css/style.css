@@ -220,6 +220,63 @@ p, .hero__desc {
   margin: 0 auto var(--sp-lg);
 }
 
+/* =====================
+   Hero Section
+===================== */
+.hero {
+  /* Replace with your real hero image path */
+  background: url('../img/placeholder‑pic‑1.jpg') no-repeat center center/cover;
+  min-height: 600px;             /* or whatever height you need */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__overlay {
+  text-align: center;
+  max-width: 700px;              /* keeps lines from getting too wide */
+  padding: var(--sp-lg);
+  color: var(--color-text);
+}
+
+.hero__overlay small {
+  display: block;
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-sm);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero__overlay h1 {
+  font-size: var(--fs-xxl);
+  margin-bottom: var(--sp-md);
+  line-height: 1.2;
+}
+
+.hero__overlay p {
+  font-size: var(--fs-md);
+  margin-bottom: var(--sp-lg);
+  color: var(--color-text-light);
+}
+
+.hero__btn {
+  /* override green button to match mockup’s black pill style */
+  background-color: #000;
+  color: #fff;
+  padding: var(--sp-sm) var(--sp-xl);
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: var(--fs-md);
+  transition: background 0.2s ease;
+}
+
+.hero__btn:hover {
+  background-color: #333;
+}
+
+
 /* -----------------
    Grid Utilities
 -------------------*/
