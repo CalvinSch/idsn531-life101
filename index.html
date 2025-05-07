@@ -80,29 +80,65 @@
 
 
 <!-- Topics Grid -->
+<script>
+  function scrollTopics(direction) {
+    const container = document.getElementById('topicsContainer');
+    const scrollAmount = 300;
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+</script>
+
+<!-- Topics Grid -->
 <section class="homepage__topics">
-<h2 class="section__title">Explore Our Topics</h2>
-<div class="grid grid--cards">
-<div class="card topic-card">
-<img src="img/moneybudgeting.png" alt="Money & Budgeting">
-<h3>Money & Budgeting</h3>
-<p>Learn how to budget and manage your money effectively.</p>
-<a href="signup.html" class="btn btn--primary">Learn Now</a>
-</div>
-<div class="card topic-card">
-<img src="img/homemaintainence.png" alt="Home Maintenance">
-<h3>Home Maintenance</h3>
-<p>Keep your living space in top shape with simple repairs.</p>
-<a href="signup.html" class="btn btn--primary">Find DIY Guides</a>
-</div>
-<div class="card topic-card">
-<img src="img/wellbeing.png" alt="Health & Well-Being">
-<h3>Health & Well-Being</h3>
-<p>Stay physically and mentally healthy with everyday tips.</p>
-<a href="signup.html" class="btn btn--primary">Get Fit</a>
-</div>
-</div>
+  <h2 class="section__title">Explore Our Topics</h2>
+  
+  <!-- Scroll Arrows -->
+  <div class="topics-scroll-container">
+    <button class="scroll-arrow left" onclick="scrollTopics(-1)">&#9664;</button>
+
+    <div class="grid grid--cards scrollable-topics" id="topicsContainer">
+      <div class="card topic-card">
+        <img src="img/moneybudgeting.png" alt="Money & Budgeting">
+        <h3>Money & Budgeting</h3>
+        <p>Learn how to budget and manage your money effectively.</p>
+        <a href="signup.html" class="btn btn--primary">Learn Now</a>
+      </div>
+      <div class="card topic-card">
+        <img src="img/homemaintainence.png" alt="Home Maintenance">
+        <h3>Home Maintenance</h3>
+        <p>Keep your living space in top shape with simple repairs.</p>
+        <a href="signup.html" class="btn btn--primary">Find DIY Guides</a>
+      </div>
+      <div class="card topic-card">
+        <img src="img/wellbeing.png" alt="Health & Well-Being">
+        <h3>Health & Well-Being</h3>
+        <p>Stay physically and mentally healthy with everyday tips.</p>
+        <a href="signup.html" class="btn btn--primary">Get Fit</a>
+      </div>
+      <div class="card topic-card">
+        <img src="img/jobskills.png" alt="Job Skills">
+        <h3>Job Skills</h3>
+        <p>Gain essential skills for landing and keeping a job.</p>
+        <a href="signup.html" class="btn btn--primary">Skill Up</a>
+      </div>
+      <div class="card topic-card">
+        <img src="img/mealprep.png" alt="Meal Prep">
+        <h3>Meal Prep</h3>
+        <p>Cook nutritious meals efficiently and affordably.</p>
+        <a href="signup.html" class="btn btn--primary">Start Cooking</a>
+      </div>
+      <div class="card topic-card">
+        <img src="img/socialskills.png" alt="Social Skills">
+        <h3>Social Skills</h3>
+        <p>Improve communication, empathy, and confidence.</p>
+        <a href="signup.html" class="btn btn--primary">Get Confident</a>
+      </div>
+    </div>
+
+    <button class="scroll-arrow right" onclick="scrollTopics(1)">&#9654;</button>
+  </div>
 </section>
+
 
 <!-- Connect Section -->
 <section class="homepage__connect">
