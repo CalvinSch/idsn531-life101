@@ -264,7 +264,6 @@ p, .hero__desc {
 .hero__btn {
   /* override green button to match mockup’s black pill style */
   background-color: #000;
-  color: #fff;
   padding: var(--sp-sm) var(--sp-xl);
   border-radius: 999px;
   text-transform: uppercase;
