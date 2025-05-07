@@ -232,7 +232,7 @@ margin: 0 auto var(--sp-lg);
 
 .hero__btn {
     display: inline-block;
-    padding: var(--sp-sm) var(--sp-sm);
+    padding: var(--sp-sm) var(--sp-xl);
     background-color: var(--color-primary);
     color: white;
     font-size: var(--fs-md);
