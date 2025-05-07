@@ -14,7 +14,7 @@
     --color-border: #E3E3E3;
     --color-text: #22282B;
     --color-text-light: rgba(34, 40, 43, 0.8);
-  
+
     /* Font Sizes */
     --fs-xxl: 3rem;    /* ~49px */
     --fs-xl: 2.25rem;  /* ~36px */
@@ -22,7 +22,7 @@
     --fs-md: 1rem;     /* ~16px */
     --fs-sm: 0.875rem; /* ~14px */
     --fs-xs: 0.75rem;  /* ~12px */
-  
+
     /* Spacing */
     --sp-xxl: 4rem;
     --sp-xl: 2rem;
@@ -30,157 +30,159 @@
     --sp-md: 1rem;
     --sp-sm: 0.5rem;
     --sp-xs: 0.25rem;
-  
+
     /* Breakpoints */
     --bp-sm: 480px;
     --bp-md: 768px;
     --bp-lg: 1024px;
-  }
-  
-  /* -----------------
-     Base & Reset
-  -------------------*/
-  *, *::before, *::after {
+}
+
+/* -----------------
+   Base & Reset
+-------------------*/
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body {
+}
+
+body {
     font-family: 'Manrope', sans-serif;
     font-size: var(--fs-md);
     color: var(--color-text);
     background-color: var(--color-bg);
     line-height: 1.5;
-  }
-  a {
+}
+
+a {
     color: var(--color-primary);
     text-decoration: none;
     transition: color 0.2s ease;
-  }
-  a:hover {
+}
+
+a:hover {
     color: var(--color-primary-dark);
-  }
-  img {
+}
+
+img {
     max-width: 100%;
     display: block;
-  }
-  .layout-wrapper {
+}
+
+.layout-wrapper {
     max-width: 982px;
     margin: 0 auto;
     padding: var(--sp-lg) var(--sp-md);
-  }
-  
-  /* =================
-     Navbar
-  ================= */
-  .navbar {
-    position: relative;    /* ← add this */
+}
+
+/* =================
+   Navbar
+================= */
+.navbar {
+    position: relative;
     padding: var(--sp-sm) var(--sp-lg);
     border-bottom: 1px solid var(--color-border);
-  }
-  
-  
-  .navbar__wrapper {
+}
+
+.navbar__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  /* Logo */
-  .navbar__logo img {
+}
+
+/* Logo */
+.navbar__logo img {
     height: 34px;
-  }
-  
-  /* Nav links & auth */
-  .navbar__menu {
+}
+
+/* Nav links & auth */
+.navbar__menu {
     display: flex;
     align-items: center;
     gap: var(--sp-lg);
-  }
-  
-  .navbar__link {
+}
+
+.navbar__link {
     padding: var(--sp-xs) var(--sp-sm);
     font-size: var(--fs-md);
     border-radius: 4px;
     transition: color 0.2s, background 0.2s;
-  }
-  
-  .navbar__link:hover,
-  .navbar__link:focus {
+}
+
+.navbar__link:hover,
+.navbar__link:focus {
     background-color: var(--color-light-bg);
     outline: none;
-  }
-  
-  .navbar__link:focus {
+}
+
+.navbar__link:focus {
     box-shadow: 0 0 0 3px rgba(1,118,27,0.3);
-  }
-  
-  /* Secondary “Sign In” link */
-  .navbar__signin {
+}
+
+/* Secondary “Sign In” link */
+.navbar__signin {
     color: var(--color-primary-dark);
-  }
-  
-  /* Primary “Register” button */
-  .navbar__signup {
+}
+
+/* Primary “Register” button */
+.navbar__signup {
     margin-left: var(--sp-lg);
-  }
-  
-  /* Burger icon (desktop hidden) */
-  .navbar__burger {
+}
+
+/* Burger icon (desktop hidden) */
+.navbar__burger {
     display: none;
     background: none;
     border: none;
     font-size: var(--fs-xl);
     cursor: pointer;
     color: var(--color-text);
-  }
-  
-  /* ===========================================
+}
+
+/* ===========================================
      Mobile navbar override
      (ensure this comes at the very bottom)
-  =========================================== */
-  @media (max-width: 768px) {
+=========================================== */
+@media (max-width: 768px) {
     /* show burger, hide menu */
     .navbar__burger {
-      display: block;
+        display: block;
     }
     .navbar__menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: var(--color-bg);
-      padding: var(--sp-md);
-      gap: var(--sp-md);
-      border-top: 1px solid var(--color-border);
-      z-index: 999;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--color-bg);
+        padding: var(--sp-md);
+        gap: var(--sp-md);
+        border-top: 1px solid var(--color-border);
+        z-index: 999;
     }
     /* toggle open */
     .navbar__menu.show {
-      display: flex;
+        display: flex;
     }
     /* stack all items */
     .navbar__link,
     .navbar__signin,
     .navbar__signup {
-      display: block;
-      width: 100%;
-      margin: var(--sp-sm) 0;
+        display: block;
+        width: 100%;
+        margin: var(--sp-sm) 0;
     }
     /* remove extra left margin on the signup button */
     .navbar__signup {
-      margin-left: 0;
+        margin-left: 0;
     }
-  }
-  
-  
-  
-  /* -----------------
-     Buttons
-  -------------------*/
-  .btn {
+}
+
+/* -----------------
+   Buttons
+-------------------*/
+.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -190,140 +192,142 @@
     cursor: pointer;
     font-weight: 600;
     transition: background 0.2s ease;
-  }
-  .btn--primary {
+}
+.btn--primary {
     background-color: var(--color-primary);
     color: var(--color-bg);
-  }
-  .btn--primary:hover {
+}
+.btn--primary:hover {
     background-color: var(--color-primary-dark);
-  }
-  
-  /* -----------------
-     Sections & Typography
-  -------------------*/
-  h1, .hero__title {
+}
+
+/* -----------------
+   Sections & Typography
+-------------------*/
+h1, .hero__title {
     font-size: var(--fs-xxl);
     margin-bottom: var(--sp-lg);
     text-align: center;
-  }
-  h2, .section__title {
+}
+
+h2, .section__title {
     font-size: var(--fs-xl);
     margin: var(--sp-lg) 0 var(--sp-md);
     text-align: center;
-  }
-  p, .hero__desc {
+}
+
+p, .hero__desc {
     font-size: var(--fs-sm);
     color: var(--color-text-light);
     text-align: center;
     max-width: 600px;
     margin: 0 auto var(--sp-lg);
-  }
-  
-  /* -----------------
-     Grid Utilities
-  -------------------*/
-  .grid {
+}
+
+/* -----------------
+   Grid Utilities
+-------------------*/
+.grid {
     display: flex;
     flex-wrap: wrap;
     gap: var(--sp-lg);
-  }
-  .grid--cards {
+}
+.grid--cards {
     justify-content: center;
-  }
-  .card {
+}
+.card {
     background: var(--color-light-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: var(--sp-md);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .card:hover {
+}
+.card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  /* Specialized card widths */
-  .topic-card, .team-card, .blog-card {
+}
+
+/* Specialized card widths */
+.topic-card, .team-card, .blog-card {
     flex: 1 1 260px;
-  }
-  
-  /* -----------------
-     Responsive Overrides
-  -------------------*/
-  @media (max-width: var(--bp-md)) {
+}
+
+/* -----------------
+   Responsive Overrides
+-------------------*/
+@media (max-width: var(--bp-md)) {
     h1, h2 {
-      font-size: var(--fs-lg);
+        font-size: var(--fs-lg);
     }
-  }
-  
-  /* -----------------
-     Team Section
-  -------------------*/
-  
-  /* Switch the grid to CSS Grid for even gutters */
-  .team-section .grid {
+}
+
+/* -----------------
+   Team Section
+-------------------*/
+
+/* Switch the grid to CSS Grid for even gutters */
+.team-section .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--sp-lg);
-  }
-  
-  /* Card tweaks for consistent layout */
-  .team-card {
+}
+
+/* Card tweaks for consistent layout */
+.team-card {
     display: flex;
     flex-direction: column;
     background: var(--color-light-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     overflow: hidden; /* keep our image corners */
-  }
-  
-  /* Force all images to the same height & cover the box */
-  .team-card img {
+}
+
+/* Force all images to the same height & cover the box */
+.team-card img {
     width: 100%;
     height: 240px;
     object-fit: cover;
-  }
-  
-  /* Give headings and paragraphs room */
-  .team-card h3 {
+}
+
+/* Give headings and paragraphs room */
+.team-card h3 {
     margin: var(--sp-md) 0 var(--sp-sm);
-  }
-  .team-card p {
+}
+.team-card p {
     flex: 1;               /* push skills row to the bottom */
     font-size: var(--fs-sm);
     color: var(--color-text-light);
     line-height: 1.4;
     margin: 0 var(--sp-md) var(--sp-md);
     text-align: left;
-  }
-  
-  /* Style the skills as horizontal “badges” */
-  .team-card__skills {
+}
+
+/* Style the skills as horizontal “badges” */
+.team-card__skills {
     display: flex;
     flex-wrap: wrap;
     gap: var(--sp-xs);
     padding: 0 var(--sp-md) var(--sp-md);
     margin: 0;
     list-style: none;
-  }
-  .team-card__skills li {
+}
+.team-card__skills li {
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: 16px;
     padding: var(--sp-xs) var(--sp-sm);
     font-size: var(--fs-xs);
     color: var(--color-text);
-  }
-  
-  /* Optional: center your section title and add bottom padding */
-  .team-section {
+}
+
+/* Optional: center your section title and add bottom padding */
+.team-section {
     padding-bottom: var(--sp-xxl);
-  }
-  
-  /* Avatar‐style team photos */
-  .team-card img {
+}
+
+/* Avatar‐style team photos */
+.team-card img {
     /* Make it a circle: */
     width: 150px;
     height: 150px;
@@ -338,58 +342,58 @@
     
     /* Remove any overflow cropping from the parent: */
     overflow: visible;
-  }
-  
-  /* -----------------
-     Topics Section
-  -------------------*/
-  .topics-section {
+}
+
+/* -----------------
+   Topics Section
+-------------------*/
+.topics-section {
     padding-bottom: var(--sp-xxl);
-  }
-  
-  .topics-section .hero__title,
-  .topics-section .hero__desc {
+}
+
+.topics-section .hero__title,
+.topics-section .hero__desc {
     text-align: center;
-  }
-  
-  .topics-section .topics-grid {
+}
+
+.topics-section .topics-grid {
     display: grid;
     /* 2–3 columns depending on width */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--sp-lg);
     margin-top: var(--sp-lg);
-  }
-  
-  /* Topic cards */
-  .topic-card {
+}
+
+/* Topic cards */
+.topic-card {
     display: flex;
     flex-direction: column;
     padding: var(--sp-md);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-  }
-  .topic-card:hover {
+}
+.topic-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-  }
-  
-  .topic-card h2 {
+}
+
+.topic-card h2 {
     margin: 0 0 var(--sp-sm);
     font-size: var(--fs-lg);
     display: flex;
     align-items: center;
     gap: var(--sp-sm);
-  }
-  
-  .topic-card p {
+}
+
+.topic-card p {
     flex: 1;
     margin: 0 0 var(--sp-md);
     line-height: 1.5;
     color: var(--color-text-light);
     text-align: left;
-  }
-  
-  /* Learn More button */
-  .topic-card__btn {
+}
+
+/* Learn More button */
+.topic-card__btn {
     display: inline-block;
     padding: var(--sp-xs) var(--sp-lg);
     margin-top: auto;
@@ -402,67 +406,66 @@
     width: 100%;
     text-align: center;
     transition: background 0.2s ease;
-  }
-  .topic-card__btn:hover {
+}
+.topic-card__btn:hover {
     background-color: var(--color-primary-dark);
-  }
-  
-  @media (min-width: 600px) {
+}
+
+@media (min-width: 600px) {
     .topic-card__btn {
-      width: auto;
+        width: auto;
     }
-  }
-  
-  /* ======================
-     Resources Section
-  ====================== */
-  .resources-section {
+}
+
+/* ======================
+   Resources Section
+====================== */
+.resources-section {
     padding-bottom: var(--sp-xxl);
-  }
-  
-  .resources-section .hero__title,
-  .resources-section .hero__desc {
+}
+
+.resources-section .hero__title,
+.resources-section .hero__desc {
     text-align: center;
-  }
-  
-  /* grid identical to Topics */
-  .resources-section .topics-grid {
+}
+
+/* grid identical to Topics */
+.resources-section .topics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--sp-lg);
     margin-top: var(--sp-lg);
-  }
-  
-  
-  /* ======================
-     Blog Section
-  ====================== */
-  .blog-section {
+}
+
+/* ======================
+   Blog Section
+====================== */
+.blog-section {
     padding-bottom: var(--sp-xxl);
-  }
-  
-  .blog-section .hero__title,
-  .blog-section .hero__desc {
+}
+
+.blog-section .hero__title,
+.blog-section .hero__desc {
     text-align: center;
-  }
-  
-  /* two-up grid for cards */
-  .blog-section .blog-grid {
+}
+
+/* two-up grid for cards */
+.blog-section .blog-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--sp-lg);
     margin-top: var(--sp-lg);
-  }
-  
-  /* mobile: drop to one column */
-  @media (max-width: 600px) {
+}
+
+/* mobile: drop to one column */
+@media (max-width: 600px) {
     .blog-section .blog-grid {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
-  
-  /* Blog cards */
-  .blog-card {
+}
+
+/* Blog cards */
+.blog-card {
     display: flex;
     flex-direction: column;
     padding: var(--sp-md);
@@ -470,93 +473,90 @@
     border-radius: 8px;
     background: var(--color-light-bg);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .blog-card:hover {
+}
+.blog-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  .blog-card img {
+}
+.blog-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 4px 4px 0 0;
     margin-bottom: var(--sp-md);
-  }
-  .blog-card h3 {
+}
+.blog-card h3 {
     margin: 0 0 var(--sp-sm);
     font-size: var(--fs-lg);
-  }
-  .blog-card p {
+}
+.blog-card p {
     flex: 1;
     margin: 0 0 var(--sp-md);
     line-height: 1.5;
     color: var(--color-text-light);
-  }
-  .blog-card em {
+}
+.blog-card em {
     font-size: var(--fs-xs);
     color: var(--color-text-light);
     margin-bottom: var(--sp-sm);
-  }
-  .blog-card__btn {
+}
+.blog-card__btn {
     align-self: start;
-  }
-  
-  /* hide extra blog cards until “Load More” is clicked */
-  .blog-card.hidden {
+}
+
+/* hide extra blog cards until “Load More” is clicked */
+.blog-card.hidden {
     display: none;
-  }
-  
-  
-  
-  
-  /* =========================
-     Article Page (Blog Post)
-  ========================= */
-  .article-page__wrapper {
+}
+
+/* =========================
+   Article Page (Blog Post)
+========================= */
+.article-page__wrapper {
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: var(--sp-xl);
     margin: var(--sp-xl) auto;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  .article-page .hero__title {
+}
+
+.article-page .hero__title {
     font-size: var(--fs-xxl);
     margin-bottom: var(--sp-md);
     text-align: center;
-  }
-  
-  .article-page .hero__desc {
+}
+
+.article-page .hero__desc {
     font-size: var(--fs-sm);
     color: var(--color-text-light);
     text-align: center;
     max-width: 600px;
     margin: 0 auto var(--sp-lg);
     line-height: 1.5;
-  }
-  
-  .article-content h2 {
+}
+
+.article-content h2 {
     font-size: var(--fs-lg);
     margin: var(--sp-lg) 0 var(--sp-md);
-  }
-  
-  .article-content p {
+}
+
+.article-content p {
     font-size: var(--fs-md);
     line-height: 1.6;
     margin-bottom: var(--sp-md);
     color: var(--color-text);
-  }
-  
-  .article-content blockquote {
+}
+
+.article-content blockquote {
     border-left: 4px solid var(--color-primary);
     padding-left: var(--sp-md);
     margin: var(--sp-lg) 0;
     font-style: italic;
     color: var(--color-text);
-  }
-  
-  .article-content img {
+}
+
+.article-content img {
     width: 100%;
     max-width: 720px;
     height: auto;
@@ -564,42 +564,42 @@
     margin: var(--sp-lg) auto;
     display: block;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  .article-author {
+}
+
+.article-author {
     margin-top: var(--sp-xxl);
     padding: var(--sp-lg);
     background: var(--color-light-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
-  }
-  .article-author h3 {
+}
+.article-author h3 {
     margin-bottom: var(--sp-sm);
     font-size: var(--fs-md);
-  }
-  .article-author p {
+}
+.article-author p {
     font-size: var(--fs-sm);
     color: var(--color-text-light);
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .article-page__wrapper {
-      padding: var(--sp-md);
-      margin: var(--sp-md);
+        padding: var(--sp-md);
+        margin: var(--sp-md);
     }
     .article-content h2 {
-      font-size: var(--fs-md);
+        font-size: var(--fs-md);
     }
     .article-content p,
     .article-content blockquote {
-      font-size: var(--fs-sm);
+        font-size: var(--fs-sm);
     }
-  }
-  
-  /* ======================
-     Form Pages (Sign-In / Sign-Up)
-  ====================== */
-  .form-container {
+}
+
+/* ======================
+   Form Pages (Sign-In / Sign-Up)
+====================== */
+.form-container {
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: 8px;
@@ -607,48 +607,48 @@
     max-width: 480px;
     margin: var(--sp-xxl) auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  .form-container h1 {
+}
+
+.form-container h1 {
     margin-bottom: var(--sp-lg);
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: var(--sp-md);
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     display: block;
     margin-bottom: var(--sp-xs);
     font-weight: 600;
-  }
-  
-  .form-group input {
+}
+
+.form-group input {
     width: 100%;
     padding: var(--sp-sm);
     border: 1px solid var(--color-border);
     border-radius: 4px;
     font-size: var(--fs-md);
-  }
-  
-  .form-group input:focus {
+}
+
+.form-group input:focus {
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px rgba(1,118,27,0.2);
-  }
-  
-  .btn--block {
+}
+
+.btn--block {
     display: block;
     width: 100%;
     margin-top: var(--sp-md);
-  }
-  
-  .form-footer {
+}
+
+.form-footer {
     text-align: center;
     margin-top: var(--sp-md);
     font-size: var(--fs-sm);
-  }
-  
-  .form-footer a {
+}
+
+.form-footer a {
     font-weight: 600;
-  }
+}
